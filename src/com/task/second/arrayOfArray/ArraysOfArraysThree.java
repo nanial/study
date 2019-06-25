@@ -27,7 +27,6 @@ public class ArraysOfArraysThree {
         for(int i = 0; i < n; i++){
             System.out.format("%4d", arr[k - 1][i]);
         }
-
     }
 }
 
