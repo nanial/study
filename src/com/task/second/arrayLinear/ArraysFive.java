@@ -1,4 +1,4 @@
-package com.task.second.arrayOne;
+package com.task.second.arrayLinear;
 
 // Даны целые числа а1 ,а2 ,..., аn .
 // Вывести на печать только те числа, для которых аi > i.

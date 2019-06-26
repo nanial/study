@@ -1,4 +1,4 @@
-package com.task.second.arrayOne;
+package com.task.second.arrayLinear;
 
 //Дана последовательность целых чисел n a1 ,a2...an.
 // Образовать новую последовательность, выбросив из

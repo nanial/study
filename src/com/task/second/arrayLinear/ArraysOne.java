@@ -1,4 +1,4 @@
-package com.task.second.arrayOne;
+package com.task.second.arrayLinear;
 
 //find sum of element aliquot K
 //В массив A [N] занесены натуральные числа.

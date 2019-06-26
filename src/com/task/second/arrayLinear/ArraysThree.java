@@ -1,4 +1,4 @@
-package com.task.second.arrayOne;
+package com.task.second.arrayLinear;
 
 //Дан массив действительных чисел, размерность которого N.
 // Подсчитать, сколько в нем отрицательных,

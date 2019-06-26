@@ -1,4 +1,4 @@
-package com.task.second.arrayOne;
+package com.task.second.arrayLinear;
 
 // Задана последовательность N вещественных чисел. Вычислить сумму чисел, порядковые номера которых
 //являются простыми числами.

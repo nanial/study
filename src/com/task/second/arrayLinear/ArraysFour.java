@@ -1,4 +1,4 @@
-package com.task.second.arrayOne;
+package com.task.second.arrayLinear;
 
 //Даны действительные числа а1 ,а2 ,..., аn .
 // Поменять местами наибольший и наименьший элементы
