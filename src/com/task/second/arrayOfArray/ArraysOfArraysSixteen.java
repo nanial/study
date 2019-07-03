@@ -92,7 +92,7 @@ public class ArraysOfArraysSixteen {
         int nColsLeft = halfN / 2;
         int nColsRight = nColsLeft - 1;
 
-        for (int row = 0; row < halfN; row++)
+        for (int row = 0; row < halfN; row++) {
             for (int column = 0; column < n; column++) {
                 if (column < nColsLeft || column >= n - nColsRight
                         || (column == nColsLeft && row == nColsLeft)) {
@@ -105,6 +105,7 @@ public class ArraysOfArraysSixteen {
                     magicSquare[row + halfN][column] = temp;
                 }
             }
+        }
         return magicSquare;
     }
     private static void print (int [][] magicSquare){
