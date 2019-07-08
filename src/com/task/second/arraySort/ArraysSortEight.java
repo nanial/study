@@ -9,23 +9,23 @@ public class ArraysSortEight {
 
         int[] numerator = new int[]{5,8,9,1,4,15,26,11};
         int[] denominator = new int[]{6,14,21,13,9,8,4,10};
-        int minDivisor = getDivisor(denominator[0], denominator[1]);//if length of array equals 2
+        int minMultypl = getCommonMutl(denominator[0], denominator[1]);//if length of array equals 2
 
         print(numerator, denominator);
 
         for (int i = 2; i < denominator.length; i++) {           //commence from 2-element
-            minDivisor = getDivisor(minDivisor, denominator[i]); //find unique divisor between elements
+            minMultypl = getCommonMutl(minMultypl, denominator[i]); //find unique divisor between elements
         }                                                       //compare each el-t and exist min divisor
 
         for (int i = 0; i < denominator.length; i++) {
-            numerator[i] = numerator[i] * (minDivisor / denominator[i]);//make equals init fraction
-            denominator[i] = minDivisor;//make same denominator
+            numerator[i] = numerator[i] * (minMultypl / denominator[i]);//make equals init fraction
+            denominator[i] = minMultypl;//make same denominator
         }
         exchangeSort(numerator);
         print(numerator, denominator);
     }
 
-    private static int getDivisor(int a, int b) {
+    private static int getCommonMutl(int a, int b) {
         return (a * b) / evqlide(a, b);
     }
 
