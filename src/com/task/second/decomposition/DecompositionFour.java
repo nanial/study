@@ -4,8 +4,6 @@ package com.task.second.decomposition;
 //определяющие, между какими из пар точек самое большое расстояние.
 //Указание. Координаты точек занести в массив.
 
-import java.util.Arrays;
-
 public class DecompositionFour {
 
     public static void main(String[] args){
