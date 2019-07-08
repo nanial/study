@@ -6,15 +6,15 @@ package com.task.second.decomposition;
 
 public class DecompositionOne {
 
-        public static void main(String[] args) {
-            System.out.println("Minor of common multiplicity is " + getCommonMult(5, 9));
-            System.out.println("The great common divisor is " + evqlide( 8,6));
+    public static void main(String[] args) {
+        System.out.println("Minor of common multiplicity is " + getCommonMult(5, 9));
+        System.out.println("The great common divisor is " + evqlide( 8,48));
 
     }
 
     private static int getCommonMult(int a, int b) {
 
-            return (a * b) / evqlide(a, b);
+        return (a * b) / evqlide(a, b);
     }
 
     private static int evqlide(int a, int b) {
