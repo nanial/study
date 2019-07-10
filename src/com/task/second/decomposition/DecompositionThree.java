@@ -10,7 +10,7 @@ public class DecompositionThree {
         }
 
         private static double triangleArea(int a) {
-            return (a * a * Math.sqrt(3)) / 4;
+            return (a * a * Math.sqrt(3)) / 4;//here is equilateral triangle, works for this type of triangle
         }
 
         private static double hexagonArea(int a){

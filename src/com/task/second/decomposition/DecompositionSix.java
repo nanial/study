@@ -5,7 +5,7 @@ package com.task.second.decomposition;
 public class DecompositionSix {
 
     public static void main(String[] args) {
-        System.out.println(simpleVer(7, 5, 11));
+        System.out.println(simpleVer(75, 5, 11));
     }
 
     private static boolean simpleVer(int a, int b, int c) {
