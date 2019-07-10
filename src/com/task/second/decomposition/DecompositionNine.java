@@ -19,7 +19,6 @@ public class DecompositionNine {
         }
 
         private static double heron (double a, double b, double c){
-
             double halfPerim = (a + b + c) / 2;
             return Math.sqrt(halfPerim * (halfPerim - a) *
                     (halfPerim - b) * (halfPerim - c));
