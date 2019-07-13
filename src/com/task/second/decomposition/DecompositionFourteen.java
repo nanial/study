@@ -25,16 +25,16 @@ class DecompositionFourteen {
             n = getDigits(k);
             degrees = n;
 
-                int[] X = new int[n];
+                int[] arr = new int[n];
 
-                for (int i = 0; i < X.length; i++) {
-                    X[i] = (k % (int) (Math.pow(10, n))
+                for (int i = 0; i < arr.length; i++) {
+                    arr[i] = (k % (int) (Math.pow(10, n))
                             - k % (int) (Math.pow(10, n - 1)))
                             / (int) (Math.pow(10, n - 1));//divide number in unique digit
                     n--;
                 }
 
-                for (int i : X) {
+                for (int i : arr) {
                     result += (int) (Math.pow(i, degrees));//sum all unique digit in degrees
                 }
 
