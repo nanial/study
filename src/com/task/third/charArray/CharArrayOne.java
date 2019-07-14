@@ -15,8 +15,8 @@ public class CharArrayOne {
                 char[] charArr = i.toCharArray();
 
                 for (int j : charArr) {
-                    if (j >= 65 && j <= 90) {
-                        counter++;
+                    if (j >= 65 && j <= 90) {//make space for "_"
+                        counter++;          //upper register
                     }
                 }
                 char[] temp = new char[charArr.length + counter];
