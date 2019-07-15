@@ -4,7 +4,9 @@ package com.task.third.StringAndStrBuilder;
 
 
 public class StringAndStrBuilderThree {
+
     public static void main(String[] args) {
+
         String s = "lolalol";
         StringBuffer rev = new StringBuffer(s).reverse();
 
