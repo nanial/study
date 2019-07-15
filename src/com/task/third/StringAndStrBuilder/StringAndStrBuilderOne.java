@@ -2,10 +2,8 @@ package com.task.third.StringAndStrBuilder;
 
 //Дан текст (строка). Найдите наибольшее количество подряд идущих пробелов в нем
 
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
-public class StringAndStrBuilder {
+public class StringAndStrBuilderOne {
     public static void main(String[] args) {
         String s = " And   don't      stuff up   your head" +
                 " with  things  you don't  understand ";
