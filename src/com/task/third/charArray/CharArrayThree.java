@@ -18,17 +18,12 @@ public class CharArrayThree {
         }
 
         private  static int countOfNumber(String s){
-            Pattern patt = Pattern.compile("\\d");
-            Matcher match;
             int counter = 0;
+            Pattern patt = Pattern.compile("\\d");
+            Matcher match = patt.matcher(s);
 
-            for(int i = 0; i < s.length(); i++){
-
-                match = patt.matcher(String.valueOf(s.charAt(i)));//receive value of symbol
-                                                                 //charAt refer at index
-                if(match.matches()) {
-                    counter++;
-                }
+            while(match.find()){
+                counter++;
             }
             return counter;
         }
