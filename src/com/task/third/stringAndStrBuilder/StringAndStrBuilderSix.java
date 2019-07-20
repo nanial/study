@@ -1,7 +1,7 @@
 package com.task.third.stringAndStrBuilder;
 
 //Из заданной строки получить новую, повторив каждый символ дважды
-
+//Receive new string from old repeat each symbol twice
 public class StringAndStrBuilderSix {
 
     public static void main(String[] args) {
