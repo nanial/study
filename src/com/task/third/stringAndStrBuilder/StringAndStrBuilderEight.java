@@ -1,4 +1,4 @@
-package com.task.third.StringAndStrBuilder;
+package com.task.third.stringAndStrBuilder;
 
 //Вводится строка слов, разделенных пробелами. Найти самое длинное
 // слово и вывести его на экран. Случай, когда самых длинных слов

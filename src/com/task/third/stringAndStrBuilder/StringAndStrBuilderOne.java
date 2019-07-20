@@ -1,4 +1,4 @@
-package com.task.third.StringAndStrBuilder;
+package com.task.third.stringAndStrBuilder;
 
 //Дан текст (строка). Найдите наибольшее количество подряд идущих пробелов в нем
 

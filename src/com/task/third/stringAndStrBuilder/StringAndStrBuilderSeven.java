@@ -1,4 +1,4 @@
-package com.task.third.StringAndStrBuilder;
+package com.task.third.stringAndStrBuilder;
 
 //Вводится строка. Требуется удалить из нее повторяющиеся символы
 // и все пробелы. Например, если было введено "abc cde def",

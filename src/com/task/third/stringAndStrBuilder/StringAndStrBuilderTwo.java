@@ -1,4 +1,4 @@
-package com.task.third.StringAndStrBuilder;
+package com.task.third.stringAndStrBuilder;
 
 //В строке вставить после каждого символа 'a' символ 'b'
 

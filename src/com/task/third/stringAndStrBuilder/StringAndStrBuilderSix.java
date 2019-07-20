@@ -1,4 +1,4 @@
-package com.task.third.StringAndStrBuilder;
+package com.task.third.stringAndStrBuilder;
 
 //Из заданной строки получить новую, повторив каждый символ дважды
 

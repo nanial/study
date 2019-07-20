@@ -1,4 +1,4 @@
-package com.task.third.StringAndStrBuilder;
+package com.task.third.stringAndStrBuilder;
 
 //С помощью функции копирования и операции конкатенации составить из частей
 // слова “информатика” слово “торт”

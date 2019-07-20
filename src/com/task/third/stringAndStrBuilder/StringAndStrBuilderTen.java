@@ -1,4 +1,4 @@
-package com.task.third.StringAndStrBuilder;
+package com.task.third.stringAndStrBuilder;
 
 //Строка X состоит из нескольких предложений, каждое из
 //которых кончается точкой, восклицательным или вопросительным

@@ -1,4 +1,4 @@
-package com.task.third.StringAndStrBuilder;
+package com.task.third.stringAndStrBuilder;
 
 //Подсчитать, сколько раз среди символов заданной строки встречается буква “а”
 

@@ -1,4 +1,4 @@
-package com.task.third.StringAndStrBuilder;
+package com.task.third.stringAndStrBuilder;
 
 //Посчитать количество строчных (маленьких)
 // и прописных (больших) букв в введенной строке.

@@ -31,6 +31,5 @@ class DecompositionFifteen {
                 System.out.println(increase);
                 j++;
             }
-
     }
 }
