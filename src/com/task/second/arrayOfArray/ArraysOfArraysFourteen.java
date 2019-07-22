@@ -15,13 +15,15 @@ public class ArraysOfArraysFourteen {
 
 
         for(int i = 0; i < arr.length; i++){
+
             for (int j = i; j < arr[i].length; j++){
                 arr[i][j] = 1;
             }
         }
 
-        for(int i = 0; i < arr.length; i++){
-            System.out.println(Arrays.toString(arr[i]));
+        for(var i : arr){
+
+            System.out.println(Arrays.toString(i));
         }
     }
 }

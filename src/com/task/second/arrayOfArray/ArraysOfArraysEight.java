@@ -19,31 +19,58 @@ public class ArraysOfArraysEight {
         int[][] arr = new int [n][m];
 
         for(int i = 0; i < n; i++){
+
             for(int j = 0; j < m; j++){
+
                 arr[i][j] = (int) (Math.random() * 100 - 50);
                 System.out.format("%5d", arr[i][j]);
             }
             System.out.println();
         }
-        try(Scanner scan = new Scanner(System.in)) {
-            System.out.println("Insert number of column 'from' number contains[0;5] :");
-            from = scan.nextInt();
-            System.out.println("Insert number of column 'to' number contains[0;5] :");
-            to = scan.nextInt();
+
+        try(@SuppressWarnings("") Scanner scan = new Scanner(System.in)) {
+
+            from = verify(scan, "Insert number of column 'from' number contains[0;5] :");
+            to = verify(scan, "Insert number of column 'to' number contains[0;5] :");
         }
 
-        for (int i = 0; i < arr.length; i++){
-            temp = arr[i][from];
-            arr[i][from] = arr[i][to];
-            arr[i][to] = temp;
-        }
+            for (int i = 0; i < arr.length; i++) {
 
-        for(int i = 0; i < n; i++){
-            for(int j = 0; j < m; j++){
-                System.out.format("%5d", arr[i][j]);
+                temp = arr[i][from];
+                arr[i][from] = arr[i][to];
+                arr[i][to] = temp;
             }
-            System.out.println();
+
+            for (int i = 0; i < n; i++) {
+
+                for (int j = 0; j < m; j++) {
+
+                    System.out.format("%5d", arr[i][j]);
+                }
+                System.out.println();
+            }
+
+    }
+
+    private static int verify(Scanner scan, String messageText) {
+        int value;
+
+        while (true) {
+            System.out.println(messageText);
+
+            if(!scan.hasNextInt()) {
+                scan.next();
+                continue;
+            }
+
+            value = scan.nextInt();
+
+            if(value >= 0 && value <= 5) {
+                break;
+            }
         }
+
+        return value;
     }
 }
 

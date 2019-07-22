@@ -20,15 +20,16 @@ public class ArraysOfArraysNine {
             for  (int i = 0; i < arr.length; i++){
 
                 for (int j = 0; j < arr[i].length; j++){
+
                     arr[i][j] = (int) (Math.random() * 100);
                     System.out.print(arr[i][j] + " ");
                 }
                 System.out.println();
             }
 
-            for(int i = 0; i < arr.length; i++){
-                for (int j = 0; j < arr[i].length; j++){
-                    arrOfSum[j] += arr[i][j];
+            for(var i : arr){
+                for (int j = 0; j < i.length; j++){
+                    arrOfSum[j] += i[j];
                 }
             }
             System.out.println(Arrays.toString(arrOfSum));

@@ -13,7 +13,9 @@ public class ArraysOfArraysEleven {
         int[][] arr = new int [n][m];
 
         for(int i = 0; i < arr.length; i++){
+
             for(int j = 0; j < arr[i].length; j++){
+
                 arr[i][j] = (int) (Math.random() * 16);
                 System.out.format("%4d", arr[i][j]);
             }
@@ -25,6 +27,7 @@ public class ArraysOfArraysEleven {
         for (int i = 0; i < arr.length; i++){
             counter = 0;
             for (int j = 0; j < arr[i].length; j++){
+
                 if(arr[i][j] == 5){
                     counter++;
                 }

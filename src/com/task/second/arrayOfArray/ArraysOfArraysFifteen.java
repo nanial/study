@@ -18,17 +18,21 @@ public class ArraysOfArraysFifteen {
             System.out.println();
         }
 
-        for (int i = 0; i < arr.length; i++) {
-                for (int j = 0; j < arr[i].length; j++) {
-                        if (max < arr[i][j]) {
-                            max = arr[i][j];
+        for (var i : arr) {
+
+                for (int j = 0; j < i.length; j++) {
+
+                        if (max < i[j]) {
+                            max = i[j];
                         }
                 }
         }
         System.out.println("-------------------------------");
 
         for (int i = 0; i < arr.length; i++) {
+
             for (int j = 0; j < arr[i].length; j++) {
+
                 if(arr[i][j] % 2 != 0){
                     arr[i][j] = max;
                 }
