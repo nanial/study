@@ -16,8 +16,13 @@ public class LinearFour {
 
         DecimalFormat df = new DecimalFormat("###.###");
 
-        try(Scanner scan = new Scanner(System.in)) {
+        try(@SuppressWarnings("") Scanner scan = new Scanner(System.in)) {
             System.out.println("Insert value in format \"###.###\" :");
+
+            while (!scan.hasNextDouble()) {
+                scan.next();
+                System.out.println("Insert value in format \"###.###\" :");
+            }
              numForInvers = scan.nextDouble();
         }
 

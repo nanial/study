@@ -13,6 +13,11 @@ public class LoopsOne {
 
         try(Scanner scan = new Scanner(System.in)) {
             System.out.println("Insert value of 'n' :");
+
+            while (!scan.hasNextInt()) {
+                System.out.println("Insert value of 'n' :");
+                scan.next();
+            }
             n = scan.nextInt();
         }
 

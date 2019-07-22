@@ -13,10 +13,20 @@ public class LinearSix {
         int x;
         int y;
 
-        try(Scanner scan = new Scanner(System.in)) {
+        try(@SuppressWarnings("") Scanner scan = new Scanner(System.in)) {
             System.out.println("Insert value of 'x' :");
-             x = scan.nextInt();
+            while (!scan.hasNextInt()) {
+                scan.next();
+                System.out.println("Insert value of 'x' :");
+            }
+            x = scan.nextInt();
+
             System.out.println("Insert value of 'y' :");
+
+            while (!scan.hasNextInt()) {
+                scan.next();
+                System.out.println("Insert value of 'y' :");
+            }
              y = scan.nextInt();
         }
 

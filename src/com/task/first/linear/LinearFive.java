@@ -11,8 +11,15 @@ public class LinearFive {
         long hours;
         long minutes;
         int seconds;
-        try(Scanner scan = new Scanner(System.in)) {
+
+        try(@SuppressWarnings("") Scanner scan = new Scanner(System.in)) {
+
             System.out.println("Insert time in seconds :");
+
+            while (!scan.hasNextLong()){
+                System.out.println("Insert time in seconds :");
+                scan.next();
+            }
             time = scan.nextLong();
         }
         hours = time / 3600;

@@ -6,6 +6,7 @@ package com.task.second.arrayLinear;
 
 public class ArraysThree {
     public static void main(String[] args) {
+
         final int N = 50;//for example
         int counterOfPositive = 0;
         int counterOfNegative = 0;
@@ -13,7 +14,9 @@ public class ArraysThree {
         double [] a = new double [N];
 
         for (int i = 0; i < a.length; i++) {
+
             a[i] = Math.random() * 100 - 50;
+
             if(a[i] > 0){
                 counterOfPositive++;
             }

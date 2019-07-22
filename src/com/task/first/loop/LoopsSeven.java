@@ -1,7 +1,8 @@
 package com.task.first.loop;
 
-//calculate all dividers of each natural number
-//exclude '1' and same number
+//Для каждого натурального числа в промежутке от m до n
+// вывести  все делители, кроме единицы и самого числа.
+//m и n вводятся с клавиатуры
 
 import java.util.Scanner;
 
@@ -11,25 +12,41 @@ public class LoopsSeven {
         int m;
         int n;
         try(Scanner scan = new Scanner(System.in)) {
+
             System.out.println("Insert value of interval from 'm' to 'n' " +
-                    "'n' and 'm' are natural numbers:");
+                    "'n' and 'm' are natural numbers :");
+
+            while (!scan.hasNextInt()) {
+                System.out.println("Insert value of 'm' :");
+                scan.next();
+            }
+
             m = scan.nextInt();
+
+            while (!scan.hasNextInt()) {
+                System.out.println("Insert value of 'n' :");
+                scan.next();
+            }
             n = scan.nextInt();
         }
-        while(m <= n){
 
-            System.out.print(m + " : ");
+        if(n > m) {
+            while (m <= n) {
 
-            for(int div = 2; div < m; div++ ){
+                System.out.print(m + " : ");
 
-                if(m % div == 0){
-                    System.out.print(div + " ");
+                for (int div = 2; div < m; div++) {
 
+                    if (m % div == 0) {
+                        System.out.print(div + " ");
+
+                    }
                 }
+                System.out.println();
+                m++;
             }
-            System.out.println();
-            m++;
         }
+        else System.out.println("n must be great m ");
 
     }
 }

@@ -14,12 +14,22 @@ public class LinearThree {
     public static void main(String[] args) {
 
         double z;
-        try(Scanner scan = new Scanner(System.in)){
+        try(@SuppressWarnings("") Scanner scan = new Scanner(System.in)){
 
             System.out.println("Insert value 'x' in radian :");
+
+            while (!scan.hasNextDouble()) {
+                scan.next();
+                System.out.println("Insert value 'x' in radian :");
+            }
             double x = scan.nextDouble();
 
             System.out.println("Insert value 'y' in radian :");
+
+            while (!scan.hasNextDouble()) {
+                scan.next();
+                System.out.println("Insert value 'y' in radian :");
+            }
             double y = scan.nextDouble();
 
             z = ((sin(x) + cos(y)) / (cos(x) - sin(y))) * tan(x * y);

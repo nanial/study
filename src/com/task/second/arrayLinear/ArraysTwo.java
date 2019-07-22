@@ -12,7 +12,7 @@ public class ArraysTwo {
         int counter = 0;
         final double Z;
 
-        try(Scanner scan = new Scanner(System.in)) {
+        try(@SuppressWarnings("") Scanner scan = new Scanner(System.in)) {
             System.out.println("Insert number of element :");
             n = scan.nextInt();
             System.out.println("Insert value of 'Z' :");
