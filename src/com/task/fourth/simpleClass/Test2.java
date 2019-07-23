@@ -1,4 +1,4 @@
-package com.task.fourth;
+package com.task.fourth.simpleClass;
 
 //Создйте класс Test2 двумя переменными. Добавьте конструктор
 // с входными параметрами. Добавьте

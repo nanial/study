@@ -1,4 +1,4 @@
-package com.task.fourth;
+package com.task.fourth.simpleClass;
 
 //Создайте класс с именем Student, содержащий поля: фамилия и инициалы,
 // номер группы, успеваемость (массив из пяти элементов).
