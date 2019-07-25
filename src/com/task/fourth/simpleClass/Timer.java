@@ -84,6 +84,7 @@ public class Timer {
     }
 
     public static void main(String[] args) {
+
         Timer time = new Timer(13, 29, 26);
         changeTime(1, 2, 3, time);
         System.out.println(time.toString());
