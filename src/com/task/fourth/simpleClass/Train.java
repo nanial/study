@@ -72,8 +72,7 @@ public class Train {
 
         for (int i = 1; i < station.length; i++){
 
-            for(int j = 0; j < station[i].destination.length() &&
-                    j < station[i - 1].destination.length(); j++){
+            for(int j = 0; j < station[i].destination.length(); j++){
 
                 if(station[i - 1].destination.charAt(j) <
                         station[i].destination.charAt(j)){
