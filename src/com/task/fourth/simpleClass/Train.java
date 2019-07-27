@@ -31,7 +31,7 @@ public class Train {
 
     public static void main(String[] args) {
 
-        Train [] station = new Train[]{
+        Train[] station = new Train[]{
                 new Train("Lvov", 145, new Date(366000)),
                 new Train("Lvov", 149, new Date(126619000)),
                 new Train("Polotsk", 126, new Date(876542012)),
@@ -50,20 +50,19 @@ public class Train {
 
     }
 
-    private static Train[] sortOfNumOfTrain(Train[] station){
+    private static Train[] sortOfNumOfTrain(Train[] station) {
 
         for (int i = 1; i < station.length; i++) {
 
-            if(station[i - 1].numOfTrain > station[i].numOfTrain){
+            if (station[i - 1].numOfTrain > station[i].numOfTrain) {
 
                 Train temp = station[i - 1];
                 station[i - 1] = station[i];
                 station[i] = temp;
 
-                if(i > 1){
+                if (i > 1) {
                     i -= 2;
-                }
-                else {
+                } else {
                     i--;
                 }
             }
@@ -72,28 +71,26 @@ public class Train {
     }
 
 
-    private static Train[] sortOfDestination(Train[] station)  {
+    private static Train[] sortOfDestination(Train[] station) {
 
-        for (int i = 1; i < station.length; i++){
+        for (int i = 1; i < station.length; i++) {
 
-            for(int j = 0; j < station[i].destination.length(); j++){
+            for (int j = 0; j < station[i].destination.length(); j++) {
 
-                if(station[i - 1].destination.charAt(j) <
-                        station[i].destination.charAt(j)){
+                if (station[i - 1].destination.charAt(j) <
+                        station[i].destination.charAt(j)) {
                     break;
-                }
-                else if(station[i - 1].destination.equals(station[i].destination)){
+                } else if (station[i - 1].destination.equals(station[i].destination)) {
 
-                    if(station[0].departure.getTime() >
-                            station[i].departure.getTime()){
+                    if (station[0].departure.getTime() >
+                            station[i].departure.getTime()) {
 
                         Train temp = station[i];
                         station[i] = station[i - 1];
                         station[i - 1] = temp;
                     }
-                }
-                else if(station[i - 1].destination.charAt(j) >
-                        station[i].destination.charAt(j)){
+                } else if (station[i - 1].destination.charAt(j) >
+                        station[i].destination.charAt(j)) {
 
                     Train temp = station[i];
                     station[i] = station[i - 1];
@@ -105,15 +102,16 @@ public class Train {
                     } else {
                         i--;
                     }
-                        break;
+                    break;
                 }
             }
         }
         return station;
     }
-    private static void print(Train[] station){
 
-        for (var v: station) {
+    private static void print(Train[] station) {
+
+        for (var v : station) {
 
             System.out.println(v.numOfTrain + " "
                     + getDateTime(v.departure)
@@ -121,9 +119,9 @@ public class Train {
         }
     }
 
-    private static void getCustomInfo(Train [] station){
+    private static void getCustomInfo(Train[] station) {
 
-        try(@SuppressWarnings("") Scanner scan = new Scanner(System.in)){
+        try (@SuppressWarnings("") Scanner scan = new Scanner(System.in)) {
             System.out.println("Input number of train :");
 
             while (!scan.hasNextInt()) {
@@ -133,9 +131,9 @@ public class Train {
 
             int customNumOfTrain = scan.nextInt();
 
-            for (var v: station){
+            for (var v : station) {
 
-                if(v.numOfTrain == customNumOfTrain){
+                if (v.numOfTrain == customNumOfTrain) {
                     System.out.println(v.numOfTrain +
                             " " + v.destination + " "
                             + getDateTime(v.departure));

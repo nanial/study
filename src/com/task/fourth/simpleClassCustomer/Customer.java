@@ -9,8 +9,7 @@ package com.task.fourth.simpleClassCustomer;
 //b) список покупателей, у которых номер кредитной карточки находится в заданном интервале
 
 import java.math.BigInteger;
-import java.util.Scanner;
-import java.util.concurrent.atomic.AtomicInteger;
+        import java.util.concurrent.atomic.AtomicInteger;
 
 public class Customer {
 
@@ -31,6 +30,7 @@ public class Customer {
         this.numOfCreditCard = numOfCreditCard;
         this.account = account;
     }
+
     public Customer(String surname, String name, String patronymic, String account) {
 
         this.id = count.incrementAndGet();
