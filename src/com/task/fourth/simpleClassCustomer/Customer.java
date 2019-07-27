@@ -9,7 +9,7 @@ package com.task.fourth.simpleClassCustomer;
 //b) список покупателей, у которых номер кредитной карточки находится в заданном интервале
 
 import java.math.BigInteger;
-        import java.util.concurrent.atomic.AtomicInteger;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class Customer {
 
