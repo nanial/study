@@ -33,15 +33,23 @@ public class RegularExspressionsOne {
 
         }
     private static void sortLexemes(String s) {
+
         String lex = "l";
             String[] sentences = s.split("(?:[?.!])");
+
             for (String sentence : sentences) {
+
                 String[] words = sentence.split("(?:[- :;,')])");
+
                 for (int k = words.length - 1; k >= 0; k--) {
+
                     for (int m = 0; m < k; m++) {
+
                         int lexemInWord = 0;
                         int lexemInNextWord = 0;
+
                         for (int n = 0; n < words[m].length(); n++) {
+
                             if (String.valueOf(words[m].charAt(n)).
                                     compareToIgnoreCase(lex) == 0) {
                                 lexemInWord++;
