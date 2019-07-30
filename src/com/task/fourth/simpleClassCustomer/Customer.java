@@ -2,7 +2,7 @@ package com.task.fourth.simpleClassCustomer;
 
 //Создать класс Customer, спецификация которого приведена ниже. Определить конструкторы, set- и get- методы
 //и метод toString().
-
+//Класс Customer: id, фамилия, имя, отчество, адрес, номер кредитной карточки, номер банковского счета.
 import java.math.BigInteger;
 import java.util.concurrent.atomic.AtomicInteger;
 
