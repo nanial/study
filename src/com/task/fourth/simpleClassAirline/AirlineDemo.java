@@ -8,9 +8,6 @@ package com.task.fourth.simpleClassAirline;
 //b) список рейсов для заданного дня недели;
 //c) список рейсов для заданного дня недели, время вылета для которых больше заданного
 
-
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
 
@@ -28,13 +25,6 @@ public class AirlineDemo {
             new Airline("Frankfurt", 1457, TypeOfPlane.AIRBUS, new Date(1648947894),
                     WeekDays.TUESDAY),
     };
-
-    public static String getDateTime(Date date) {
-
-        DateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
-        return dateFormat.format(date);
-    }
-
     private static void getFlyOfCertainDestination(String destination){
 
         for (Airline a : airport ) {

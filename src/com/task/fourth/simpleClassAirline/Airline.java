@@ -17,13 +17,6 @@ public class Airline {
     private Date departure;
     private WeekDays day;
 
-    public Airline() {
-    }
-
-    public Airline(String destination) {
-        this.destination = destination;
-    }
-
     public Airline(String destination, int nunOfRout, TypeOfPlane typeOfPlane, Date departure, WeekDays day) {
         this.destination = destination;
         this.nunOfRout = nunOfRout;

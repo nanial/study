@@ -13,18 +13,6 @@ public class State {
     public State() {
     }
 
-    public Region[] getRegions() {
-        return regions;
-    }
-
-    public String getCapital() {
-        return capital;
-    }
-
-    public int getSquare() {
-        return square;
-    }
-
     public void printCenterOfRegion(){
         for (var v : regions) {
             System.out.println(v.getCenterOfReg());
