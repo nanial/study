@@ -55,7 +55,7 @@ public class Calendar {
             } else
                 return (LocalDate.of(year, 3, 22).plusDays(d + e)).toString();
         }
-        public String ortodoxPasqua(int year) {
+        public Date ortodoxPasqua(int year) {
             Date easterDate = new Date();
             int a = year % 4;
             int b = year % 7;
@@ -70,11 +70,16 @@ public class Calendar {
             easterDate.setDate(day);
 
 
-            return easterDate.toString();
+            return easterDate;
         }
         public String dayOfMemory(int year) {
-            return ortodoxPasqua(year) + 14;//////////////////////??????!!!!!!! need correct
-
+        
+            Date mem = new Date();
+            Date easter = ortodoxPasqua(year);
+            
+            mem.setMonth(easter.getMonth());
+            mem.setDate(easter.getDay() + 9);
+            return mem.toString();
         }
     }
     public  void printConst(){
