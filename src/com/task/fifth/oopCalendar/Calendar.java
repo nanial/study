@@ -33,7 +33,7 @@ public class Calendar {
             for (int i = 1; i < 365; i++) {
                 date = LocalDate.ofYearDay(numOfYear, i);
                 if (date.getDayOfWeek() == DayOfWeek.SATURDAY || date.getDayOfWeek() == DayOfWeek.SUNDAY) {
-                    System.out.println((date.getMonthValue() + "/" + date.getDayOfMonth()));
+                    System.out.println(date.getDayOfMonth() + "/" + date.getDayOfMonth()date.getMonthValue());
                 }
             }
         }
@@ -73,15 +73,21 @@ public class Calendar {
             return easterDate;
         }
         public String dayOfMemory(int year) {
-        
+            
             Date mem = new Date();
             Date easter = ortodoxPasqua(year);
             
-            mem.setMonth(easter.getMonth());
-            mem.setDate(easter.getDay() + 9);
+            if((easter.getDate() + 9)> 30 && easter.getMonth() == 3){
+           
+            mem.setMonth(easter.getMonth() + 1);
+            mem.setDate((easter.getDate() + 9) - 30);            
+            }
+            else if ((easter.getDate() + 9)> 31){
+            mem.setMonth(easter.getMonth() + 1);
+            mem.setDate((easter.getDate() + 9) - 31);   
+            }
             return mem.toString();
         }
-    }
     public  void printConst(){
         for (String s : constantHolidays) {
             System.out.println(s);
