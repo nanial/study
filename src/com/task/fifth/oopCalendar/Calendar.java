@@ -11,10 +11,10 @@ public class Calendar {
     final private String[] constantHolidays = {"01/01", "07/01",
             "08/03", "01/05", "09/05", "03/07", "07/11", "25/12"};
 
-    private String [] transientHoliday;
+    private Arraylist<String> transientHoliday;
     public Calendar() {
-    }
-
+    }    
+    
     static class Year{
 
         private int numOfYear;
@@ -72,22 +72,29 @@ public class Calendar {
 
             return easterDate;
         }
+        
         public String dayOfMemory(int year) {
             
+    
+            SimpleDateFormat format = new SimpleDateFormat("dd/MM");		
             Date mem = new Date();
             Date easter = ortodoxPasqua(year);
             
             if((easter.getDate() + 9)> 30 && easter.getMonth() == 3){
            
             mem.setMonth(easter.getMonth() + 1);
-            mem.setDate((easter.getDate() + 9) - 30);            
+            mem.setDate((easter.getDate() + 9) - 30);     
+                
             }
             else if ((easter.getDate() + 9)> 31){
             mem.setMonth(easter.getMonth() + 1);
             mem.setDate((easter.getDate() + 9) - 31);   
-            }
-            return mem.toString();
+                
+            }            
+             
+            return format.format(mem).toString();
         }
+        
     public  void printConst(){
         for (String s : constantHolidays) {
             System.out.println(s);
