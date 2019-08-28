@@ -40,10 +40,7 @@ public class Calendar {
 
         holidays.addAll(Calendar.this.constHolAsDate());
         holidays.addAll(new TransientHolidays(this.numOfYear).getWeekEnds());
-        holidays.add(Date.from(new TransientHolidays(this.numOfYear).getEasterDate().
-                atStartOfDay(ZoneId.systemDefault()).toInstant()));
         holidays.add(new TransientHolidays(this.numOfYear).dayOfMemory());
-        holidays.add(new TransientHolidays(this.numOfYear).ortodoxPasqua());
 
         return holidays;
     }
@@ -97,24 +94,6 @@ public class Calendar {
                 }
             }
             return weekEnd;
-        }
-
-        public LocalDate getEasterDate() {
-            int a = numOfYear % 19;
-            int b = numOfYear % 4;
-            int c = numOfYear % 7;
-            int k = numOfYear / 100;
-            int p = (13 + 8 * k) / 25;
-            int q = k / 4;
-            int M = (15 - p + k - q) % 30;
-            int N = (4 + k - q) % 7;
-            int d = (19 * a + M) % 30;
-            int e = (2 * b + 4 * c + 6 * d + N) % 7;
-
-            if (d == 29 && e == 6) {
-                return (LocalDate.of(numOfYear, 3, 22).plusDays(d + e).minusDays(7));
-            } else
-                return LocalDate.of(numOfYear, 3, 22).plusDays(d + e);
         }
 
         public Date ortodoxPasqua() {
