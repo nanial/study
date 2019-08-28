@@ -26,6 +26,6 @@ public class State {
     @Override
     public String toString() {
         return  capital + " " + regions.length +
-                " regoins " + square + " km2";
+                " regions " + square + " km2";
     }
 }
