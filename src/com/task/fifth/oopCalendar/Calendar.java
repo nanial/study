@@ -13,11 +13,11 @@ public class Calendar {
             "08/03", "01/05", "09/05", "03/07", "07/11", "25/12"};
     private int numOfYear;
 
+    SimpleDateFormat format = new SimpleDateFormat("dd/MM");
+
     public Calendar(int numOfYear) {
         this.numOfYear = numOfYear;
     }
-
-    SimpleDateFormat format = new SimpleDateFormat("dd/MM");
 
     private ArrayList<Date> constHolAsDate(){
 
