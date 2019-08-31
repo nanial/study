@@ -4,7 +4,6 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.DayOfWeek;
 import java.time.LocalDate;
-import java.time.ZoneId;
 import java.util.*;
 
 public class Calendar {
@@ -106,7 +105,7 @@ public class Calendar {
             int e = (2 * a + 4 * b - d + 34) % 7;
             int month = (d + e + 114) / 31 - 1;
             int day = ((d + e + 114) % 31) + 14;
-            easterDate.setYear(numOfYear);
+
             easterDate.setMonth(month);
             easterDate.setDate(day);
             return easterDate;
@@ -127,6 +126,7 @@ public class Calendar {
                 mem.setDate((easter.getDate() + 9) - 31);
 
             }
+            mem.setYear(70);
             return mem;
         }
     }
