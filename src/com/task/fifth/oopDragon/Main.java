@@ -16,7 +16,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        new Grotto().fillingCollect();
+        //new Grotto().fillingCollect();
         new Dragon().visionOfTreasure();
     }
 }

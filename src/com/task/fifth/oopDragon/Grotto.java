@@ -14,8 +14,14 @@ public class Grotto {
 
             Random r = new Random();
             collectionOfTreasure[i] =
-                    new Treasure(r.nextLong(), r.nextDouble(), TypeOfTreasure.DIAMONDS);
+                    (new Treasure((r.nextDouble() * 10),//weight
+                            TypeOfTreasure.getTypeTreasure()));
+
+            collectionOfTreasure[i].setCost((long) (collectionOfTreasure[i].getType().getPriceGram() *
+                                collectionOfTreasure[i].getWeight()));
         }
+
         return collectionOfTreasure;
     }
+
 }
