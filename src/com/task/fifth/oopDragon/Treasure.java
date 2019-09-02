@@ -10,6 +10,9 @@ public class Treasure {
     private  double weight;
     private TypeOfTreasure type;
 
+    public Treasure() {
+    }
+
     public Treasure(double weight, TypeOfTreasure type) {
         this.id = count.incrementAndGet();
         this.weight = weight;
@@ -34,5 +37,15 @@ public class Treasure {
 
     public TypeOfTreasure getType() {
         return type;
+    }
+
+    @Override
+    public String toString() {
+        return "Treasure{" +
+                "id=" + id +
+                ", cost=" + cost +
+                ", weight=" + weight +
+                ", type=" + type +
+                '}';
     }
 }

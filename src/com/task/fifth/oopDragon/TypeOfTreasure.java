@@ -3,6 +3,7 @@ package com.task.fifth.oopDragon;
 import java.util.Random;
 
 public enum TypeOfTreasure {
+
     GOLD, SILVER, PEARLS, DIAMONDS, NOT_VALUABLE;
 
     public static TypeOfTreasure getTypeTreasure(){
@@ -11,7 +12,8 @@ public enum TypeOfTreasure {
         Random rand = new Random();
         return types[rand.nextInt(types.length)];
     }
-    public int getPriceGram() {
+
+    public int getPriceOfGramm() {
 
         int priceGram = 0;
 
@@ -27,6 +29,7 @@ public enum TypeOfTreasure {
                 break;
             case DIAMONDS :
                 priceGram = 400;
+                break;
             case NOT_VALUABLE :
                 priceGram = 0;
         }

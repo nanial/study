@@ -16,7 +16,8 @@ public class Main {
 
     public static void main(String[] args) {
 
-        //new Grotto().fillingCollect();
-        new Dragon().visionOfTreasure();
+        Dragon patronDragon = new Dragon();
+        patronDragon.visionOfTreasure();
+        System.out.println(patronDragon.getMoreExpensive().toString());
     }
 }
