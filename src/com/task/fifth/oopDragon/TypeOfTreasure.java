@@ -15,24 +15,24 @@ public enum TypeOfTreasure {
 
     public int getPriceOfGramm() {
 
-        int priceGram = 0;
+        int priceOfGram = 0;
 
         switch (this) {
             case GOLD :
-                priceGram = 190;
+                priceOfGram = 190;
                 break;
             case SILVER :
-                priceGram = 10;
+                priceOfGram = 10;
                 break;
             case PEARLS :
-                priceGram = 100;
+                priceOfGram = 100;
                 break;
             case DIAMONDS :
-                priceGram = 400;
+                priceOfGram = 400;
                 break;
             case NOT_VALUABLE :
-                priceGram = 0;
+                priceOfGram = 3;
         }
-        return priceGram;
+        return priceOfGram;
     }
 }

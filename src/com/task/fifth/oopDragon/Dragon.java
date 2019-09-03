@@ -1,5 +1,9 @@
 package com.task.fifth.oopDragon;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
+
 public class Dragon {
 
     Grotto grotto = new Grotto();
@@ -29,6 +33,25 @@ public class Dragon {
             }
         }
         return moreExpTreasure;
+    }
+
+    public ArrayList<Treasure> getTreasuresOfCertainSum(long certainSum){
+
+        long sum = 0;
+        ArrayList<Treasure> treasuresOfCertainSum = new ArrayList<>();
+
+        Arrays.sort(treasures, Comparator.comparing(Treasure::getCost));
+
+        for (Treasure t : treasures) {
+
+                sum += t.getCost();
+                
+            if(sum <= certainSum){
+
+                treasuresOfCertainSum.add(t);
+            }
+        }
+        return treasuresOfCertainSum;
     }
 
 }

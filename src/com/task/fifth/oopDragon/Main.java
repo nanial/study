@@ -19,5 +19,6 @@ public class Main {
         Dragon patronDragon = new Dragon();
         patronDragon.visionOfTreasure();
         System.out.println(patronDragon.getMoreExpensive().toString());
+        System.out.println(patronDragon.getTreasuresOfCertainSum(16));
     }
 }
