@@ -45,7 +45,7 @@ public class Dragon {
         for (Treasure t : treasures) {
 
                 sum += t.getCost();
-                
+
             if(sum <= certainSum){
 
                 treasuresOfCertainSum.add(t);
