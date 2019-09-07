@@ -2,11 +2,12 @@ package com.task.fifth.oopGift;
 
 import java.util.Random;
 
+//builder
 public class GiftShop extends AbstractShop {
 
     Random rand = new Random();
 
-    public  AbstractSweet preferSweet(){
+    public AbstractSweet preferSweet() {
 
         Sweet sweet = new Sweet(Math.round(rand.nextDouble() * 10000) / 100,
                 TypeOfSweet.getTypeSweet());
@@ -14,7 +15,7 @@ public class GiftShop extends AbstractShop {
         return sweet;
     }
 
-    public  AbstractPack preferPack(){
+    public AbstractPack preferPack() {
 
         return new Pack(Math.round(rand.nextDouble() * 10000) / 100, TypeOfPack.getTypePack());
     }
