@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="10.0.2" class="java.beans.XMLDecoder">
+ <object class="java.util.ArrayList">
+  <void method="add">
+   <object class="com.finalTask.library.domain.Customer">
+    <void property="customerEmail">
+     <string>aleco@tut.bz</string>
+    </void>
+    <void property="customerId">
+     <int>1</int>
+    </void>
+    <void property="customerPassword">
+     <string>alex012</string>
+    </void>
+    <void property="role">
+     <object class="java.lang.Enum" id="Role0" method="valueOf">
+      <class>com.finalTask.library.domain.Role</class>
+      <string>USER</string>
+     </object>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="com.finalTask.library.domain.Customer">
+    <void property="customerEmail">
+     <string>albut@tut.bz</string>
+    </void>
+    <void property="customerId">
+     <int>2</int>
+    </void>
+    <void property="customerPassword">
+     <string>kama091</string>
+    </void>
+    <void property="role">
+     <object idref="Role0"/>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="com.finalTask.library.domain.Customer">
+    <void property="customerEmail">
+     <string>boulto@tut.bz</string>
+    </void>
+    <void property="customerId">
+     <int>3</int>
+    </void>
+    <void property="customerPassword">
+     <string>olimp2020</string>
+    </void>
+    <void property="role">
+     <object idref="Role0"/>
+    </void>
+   </object>
+  </void>
+ </object>
+</java>

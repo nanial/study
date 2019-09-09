@@ -24,8 +24,8 @@ public class BookManagerImpl implements BookManager {
     }
 
     @Override
-    public void addBook(Book book) {
-        dao.addBook(book);
+    public void addBook(ArrayList<Book> books) {
+        dao.addBook(books);
     }
 
     @Override

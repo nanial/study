@@ -7,6 +7,6 @@ import java.util.ArrayList;
 public interface BookManager {
 
     ArrayList<Book> getBookList();
-    void addBook(Book book);
+    void addBook(ArrayList<Book> books);
     void delBook(Book book);
 }

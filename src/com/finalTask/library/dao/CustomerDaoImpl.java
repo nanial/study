@@ -4,33 +4,44 @@ import com.finalTask.library.apiDao.CustomerDao;
 import com.finalTask.library.domain.Book;
 import com.finalTask.library.domain.Customer;
 
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
+
+import java.beans.XMLDecoder;
+import java.beans.XMLEncoder;
+import java.io.*;
 import java.util.ArrayList;
 
-public class CustomerDaoImpl implements CustomerDao {
+public class CustomerDaoImpl implements CustomerDao{
     @Override
     public ArrayList<Customer> getListCustomer() {
-        ArrayList<String> customers;
-        ArrayList<Customer> cust = new ArrayList<>();
 
+        ArrayList<Customer> customers = new ArrayList<>();
         try {
-            customers = (ArrayList<String>) Files.readAllLines
-                    (Paths.get("D:\\study\\java\\study\\src\\com\\finalTask\\library\\customers.txt"));
+            XMLDecoder decoder = new XMLDecoder(new BufferedInputStream(new FileInputStream
+                    ("D:\\study\\java\\study\\src\\com\\finalTask\\library\\customers.txt")));
 
-            for(String s: customers){
-                System.out.println(s);
+            customers = (ArrayList<Customer>) decoder.readObject();
+
+            for (Customer c : customers) {
+                System.out.println(c.toString());
             }
-        }catch (IOException io){
+        } catch (Exception io) {
             io.getMessage();
         }
-        return null;
+        return customers;
     }
 
     @Override
-    public void addCustomer(Customer customer) {
+    public void addInFileCustomer(ArrayList<Customer> customers) {
 
+        XMLEncoder encoder = null;
+        try {
+            encoder = new XMLEncoder(new BufferedOutputStream(new FileOutputStream
+                    ("D:\\study\\java\\study\\src\\com\\finalTask\\library\\customers.txt")));
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        encoder.writeObject(customers);
+        encoder.close();
     }
 
     @Override

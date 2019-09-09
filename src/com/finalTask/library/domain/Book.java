@@ -1,7 +1,10 @@
 package com.finalTask.library.domain;
 
-public class Book {
+import java.io.Serializable;
 
+public class Book implements Serializable {
+
+    private static int count = 0;
     private int bookId;
     private String title;
     private String author;
@@ -12,20 +15,58 @@ public class Book {
     }
 
     public Book(String title, String author, boolean isDigital, String description) {
+
+        setBookId(++count);
         this.title = title;
         this.author = author;
         this.isDigital = isDigital;
         this.description = description;
     }
 
+    public int getBookId() {
+        return bookId;
+    }
+
+    public void setBookId(int bookId) {
+        this.bookId = bookId;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
+    public boolean isDigital() {
+        return isDigital;
+    }
+
+    public void setDigital(boolean digital) {
+        isDigital = digital;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
     @Override
     public String toString() {
-        return "Book{" +
-                "bookId=" + bookId +
-                ", title='" + title + '\'' +
-                ", author='" + author + '\'' +
-                ", isDigital=" + isDigital +
-                ", description='" + description + '\'' +
-                '}';
+        return  getBookId() + " " + getTitle() +
+                " " + getAuthor() + " " + isDigital() +
+                " " + getDescription();
     }
 }

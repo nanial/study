@@ -12,20 +12,28 @@ package com.finalTask.library;
 //• Каталог книг хранится в текстовом файле.
 //• Данные аутентификации пользователей хранятся в текстовом файле. Пароль не хранится в открытом виде
 
-
 import com.finalTask.library.apiBusiness.BookManager;
 import com.finalTask.library.apiBusiness.CustomerManager;
 import com.finalTask.library.business.BookManagerImpl;
 import com.finalTask.library.business.CustomerManagerImpl;
 import com.finalTask.library.dao.BookDaoImpl;
 import com.finalTask.library.dao.CustomerDaoImpl;
+import com.finalTask.library.domain.*;
 
+import java.util.ArrayList;
+import java.util.Calendar;
 
 public class Main {
 
+
     public static void main(String[] args) {
 
-        new BookManagerImpl(new BookDaoImpl()).getBookList();
-        new CustomerManagerImpl(new CustomerDaoImpl()).getListCustomer();
+        BookManager bm = new BookManagerImpl(new BookDaoImpl());
+        bm.addBook(new Catalog().fillCatalog());
+        bm.getBookList();
+
+        CustomerManager cm = new CustomerManagerImpl(new CustomerDaoImpl());
+        cm.addInFileCustomer(new Customers().fillCatalog());
+        cm.getListCustomer();
     }
 }

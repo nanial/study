@@ -21,8 +21,8 @@ public class CustomerManagerImpl implements CustomerManager {
     }
 
     @Override
-    public void addCustomer(Customer customer) {
-
+    public void addInFileCustomer(ArrayList<Customer> customers) {
+        dao.addInFileCustomer(customers);
     }
 
     @Override

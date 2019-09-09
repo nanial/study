@@ -7,6 +7,6 @@ import java.util.ArrayList;
 public interface BookDao {
 
     ArrayList<Book> getBookList();
-    void addBook(Book book);
+    void addBook(ArrayList<Book> book);
     void delBook(Book book);
 }

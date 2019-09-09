@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 public interface CustomerDao {
     ArrayList<Customer> getListCustomer();
-    void addCustomer(Customer customer);
+    void addInFileCustomer(ArrayList<Customer> customers);
     void delCustomer(Customer customer);
     void searchCertainBook(Book certainBook);
     void demandOfBook (Book certainBook);
