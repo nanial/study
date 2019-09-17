@@ -3,6 +3,7 @@ package com.finalTask.library.business;
 import com.finalTask.library.apiBusiness.BookManager;
 import com.finalTask.library.apiDao.BookDao;
 import com.finalTask.library.domain.Book;
+import com.finalTask.library.filter.BookFilter;
 
 import java.util.ArrayList;
 
@@ -19,17 +20,13 @@ public class BookManagerImpl implements BookManager {
     }
 
     @Override
-    public ArrayList<Book> getBookList() {
-        return dao.getBookList();
+    public ArrayList<Book> getBookList(BookFilter filter) {
+        return dao.getBookList(filter);
     }
 
     @Override
-    public void addBook(ArrayList<Book> books) {
-        dao.addBook(books);
+    public void writeBooksInFile(ArrayList<Book> books) {
+        dao.writeBooksInFile(books);
     }
 
-    @Override
-    public void delBook(Book book) {
-        dao.delBook(book);
-    }
 }

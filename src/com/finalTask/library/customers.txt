@@ -10,7 +10,7 @@
      <int>1</int>
     </void>
     <void property="customerPassword">
-     <string>alex012</string>
+     <int>900206174</int>
     </void>
     <void property="role">
      <object class="java.lang.Enum" id="Role0" method="valueOf">
@@ -29,7 +29,7 @@
      <int>2</int>
     </void>
     <void property="customerPassword">
-     <string>kama091</string>
+     <int>1876603405</int>
     </void>
     <void property="role">
      <object idref="Role0"/>
@@ -45,7 +45,7 @@
      <int>3</int>
     </void>
     <void property="customerPassword">
-     <string>olimp2020</string>
+     <int>-1279649558</int>
     </void>
     <void property="role">
      <object idref="Role0"/>

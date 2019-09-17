@@ -10,7 +10,7 @@ import java.beans.XMLEncoder;
 import java.io.*;
 import java.util.ArrayList;
 
-public class CustomerDaoImpl implements CustomerDao{
+public class CustomerDaoImpl implements CustomerDao {
     @Override
     public ArrayList<Customer> getListCustomer() {
 

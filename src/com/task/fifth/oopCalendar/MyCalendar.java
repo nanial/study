@@ -6,7 +6,7 @@ import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.util.*;
 
-public class Calendar {
+public class MyCalendar {
 
     final private String[] constantHolidays = {"01/01", "07/01",
             "08/03", "01/05", "09/05", "03/07", "07/11", "25/12"};
@@ -14,7 +14,7 @@ public class Calendar {
 
     SimpleDateFormat format = new SimpleDateFormat("dd/MM");
 
-    public Calendar(int numOfYear) {
+    public MyCalendar(int numOfYear) {
         this.numOfYear = numOfYear;
     }
 
@@ -37,7 +37,7 @@ public class Calendar {
 
         SortedSet<Date> holidays = new TreeSet<>();
 
-        holidays.addAll(Calendar.this.constHolAsDate());
+        holidays.addAll(MyCalendar.this.constHolAsDate());
         holidays.addAll(new TransientHolidays(this.numOfYear).getWeekEnds());
         holidays.add(new TransientHolidays(this.numOfYear).dayOfMemory());
 
@@ -59,7 +59,7 @@ public class Calendar {
 
 
         public TransientHolidays(int numOfYear) {
-            Calendar.this.numOfYear = numOfYear;
+            MyCalendar.this.numOfYear = numOfYear;
         }
 
         public int dayOfYear(){
@@ -87,7 +87,7 @@ public class Calendar {
             }
             for (String s : weekEnds) {
                 try {
-                    weekEnd.add(Calendar.this.format.parse(s));
+                    weekEnd.add(MyCalendar.this.format.parse(s));
                 } catch (ParseException pe){
                     System.out.println(pe.getMessage());
                 }

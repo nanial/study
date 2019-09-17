@@ -7,17 +7,16 @@ public class Customer implements Serializable {
     private static int count = 0;
     private int customerId;
     private String customerEmail;//regular expression
-    private String customerPassword;
+    private Object customerPassword;
     private Role role;
 
     public Customer() {
     }
 
-    public Customer(String customerEmail, String customerPassword, Role role) {
+    public Customer(String customerEmail, Role role) {
 
         setCustomerId(++count);
         this.customerEmail = customerEmail;
-        this.customerPassword = customerPassword;
         this.role = role;
     }
 
@@ -37,12 +36,12 @@ public class Customer implements Serializable {
         this.customerEmail = customerEmail;
     }
 
-    public String getCustomerPassword() {
+    public Object getCustomerPassword() {
         return customerPassword;
     }
 
-    public void setCustomerPassword(String customerPassword) {
-        this.customerPassword = customerPassword;
+    public void setCustomerPassword(Object customerPassword) {
+        this.customerPassword =  customerPassword.hashCode();
     }
 
     public Role getRole() {
