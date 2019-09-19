@@ -4,16 +4,14 @@ import java.util.ArrayList;
 
 public class MyCatalog {
 
-
     ArrayList<Book> books = new ArrayList<>();
 
-    public ArrayList<Book> fillCatalog() {
+    public ArrayList<Book> fillCatalog(Book book) {
 
-        Notification not = new Notification();
         books.add(new Book("Resurrection", "Tolstoy", false, "novel"));
-        not.sendEmail();
         books.add(new Book("War and peace", "Tolstoy", true, "novel"));
         books.add(new Book("The Enchanted Wanderer", "Leskov", false, "story"));
+        books.add(book);
 
         return books;
     }

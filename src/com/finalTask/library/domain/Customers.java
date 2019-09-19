@@ -17,6 +17,8 @@ public class Customers {
         Customer c3 = new Customer("boulto@tut.bz",  Role.USER);
         c3.setCustomerPassword("MN195248");
         customers.add(c3);
+        Customer admin = new Customer("admin@admin.lib", Role.ADMIN);
+        admin.setCustomerPassword("admin");
         return customers;
     }
 

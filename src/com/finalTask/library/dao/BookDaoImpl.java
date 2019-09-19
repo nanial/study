@@ -42,6 +42,15 @@ public class BookDaoImpl implements BookDao{
                             }
                         }
                     }
+                    if (filter.getBookPerPage() != 0) {
+
+                        for(Book b: books) {
+
+                            if (b.getBookId() <= filter.getBookPerPage()) {
+                                System.out.println(b.toString());
+                            }
+                        }
+                    }
                 }
 
                 else {

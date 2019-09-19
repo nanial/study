@@ -6,7 +6,7 @@ public class Customer implements Serializable {
 
     private static int count = 0;
     private int customerId;
-    private String customerEmail;//regular expression
+    private String customerEmail;
     private Object customerPassword;
     private Role role;
 

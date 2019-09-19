@@ -26,7 +26,7 @@ public class CustomerManagerImpl implements CustomerManager {
     }
 
     @Override
-    public void delCustomer(Customer customer) {
+    public void sendEmail(String to, String from, String pass, String message) {
 
     }
 

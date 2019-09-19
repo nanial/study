@@ -1,6 +1,6 @@
-package com.finalTask.library.dao;
+package com.finalTask.library.business;
 
-import com.finalTask.library.apiDao.CatalogBuilder;
+import com.finalTask.library.apiBusiness.CatalogBuilder;
 import com.finalTask.library.domain.MyCatalog;
 
 public class CatalogBuilderImpl implements CatalogBuilder {

@@ -7,13 +7,10 @@
      <string>Tolstoy</string>
     </void>
     <void property="bookId">
-     <int>1</int>
+     <int>2</int>
     </void>
     <void property="description">
-     <string>poem</string>
-    </void>
-    <void property="digital">
-     <boolean>true</boolean>
+     <string>novel</string>
     </void>
     <void property="title">
      <string>Resurrection</string>
@@ -26,7 +23,7 @@
      <string>Tolstoy</string>
     </void>
     <void property="bookId">
-     <int>2</int>
+     <int>3</int>
     </void>
     <void property="description">
      <string>novel</string>
@@ -45,13 +42,32 @@
      <string>Leskov</string>
     </void>
     <void property="bookId">
-     <int>3</int>
+     <int>4</int>
     </void>
     <void property="description">
      <string>story</string>
     </void>
     <void property="title">
      <string>The Enchanted Wanderer</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="com.finalTask.library.domain.Book">
+    <void property="author">
+     <string>Chehkov</string>
+    </void>
+    <void property="bookId">
+     <int>1</int>
+    </void>
+    <void property="description">
+     <string>poem</string>
+    </void>
+    <void property="digital">
+     <boolean>true</boolean>
+    </void>
+    <void property="title">
+     <string>Kern</string>
     </void>
    </object>
   </void>

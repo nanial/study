@@ -11,6 +11,10 @@ public class BookFilter {
         this.title = title;
     }
 
+    public BookFilter(int bookPerPage) {
+        this.bookPerPage = bookPerPage;
+    }
+
     public String getTitle() {
         return title;
     }
