@@ -55,19 +55,13 @@
   <void method="add">
    <object class="com.finalTask.library.domain.Book">
     <void property="author">
-     <string>Chehkov</string>
-    </void>
-    <void property="bookId">
-     <int>1</int>
+     <string>Leskov</string>
     </void>
     <void property="description">
      <string>poem</string>
     </void>
     <void property="digital">
      <boolean>true</boolean>
-    </void>
-    <void property="title">
-     <string>Kern</string>
     </void>
    </object>
   </void>
