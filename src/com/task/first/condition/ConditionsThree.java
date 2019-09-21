@@ -15,7 +15,7 @@ public class ConditionsThree {
         double cX;
         double cY;
 
-        try(Scanner scan = new Scanner(System.in)) {
+        try(@SuppressWarnings("") Scanner scan = new Scanner(System.in)) {
             System.out.println("Insert coordinates of 'a' :");
              aX = scan.nextDouble();
              aY = scan.nextDouble();

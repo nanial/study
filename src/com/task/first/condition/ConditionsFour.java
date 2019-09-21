@@ -14,7 +14,7 @@ public class ConditionsFour {
         double holeX;
         double holeY;
 
-        try(Scanner scan = new Scanner(System.in)) {
+        try(@SuppressWarnings("") Scanner scan = new Scanner(System.in)) {
             System.out.println("Insert dimensions of brick :");
             brickX = scan.nextDouble();
             brickY = scan.nextDouble();

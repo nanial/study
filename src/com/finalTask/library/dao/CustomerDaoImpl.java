@@ -28,9 +28,6 @@ public class CustomerDaoImpl implements CustomerDao {
 
             customers = (ArrayList<Customer>) decoder.readObject();
 
-            for (Customer c : customers) {
-                System.out.println(c.toString());
-            }
         } catch (Exception io) {
             io.getMessage();
         }
@@ -53,6 +50,8 @@ public class CustomerDaoImpl implements CustomerDao {
 
     @Override
     public void sendEmail(String to, String from, String pass, String mess) {
+
+
         Properties properties = new Properties();
         properties.put("mail.smtp.auth", true);
         properties.put("mail.smtp.starttls.enable", true);
@@ -78,9 +77,9 @@ public class CustomerDaoImpl implements CustomerDao {
                     properties.getProperty(pass));
             tr.sendMessage(message, message.getAllRecipients());
             tr.close();
-            System.out.println("message sent successfully....");
 
-        }catch (MessagingException mex) {mex.printStackTrace();}
+        }
+        catch (MessagingException mex) {mex.printStackTrace();}
 
     }
 

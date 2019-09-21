@@ -4,15 +4,15 @@ public class BookFilter {
 
     private String title;
     private String author;
-    private int bookPerPage;
+    private int numOfPage;
 
     public BookFilter(String author, String title) {
         this.author = author;
         this.title = title;
     }
 
-    public BookFilter(int bookPerPage) {
-        this.bookPerPage = bookPerPage;
+    public BookFilter(int numOfPage) {
+        this.numOfPage = numOfPage;
     }
 
     public String getTitle() {
@@ -31,12 +31,12 @@ public class BookFilter {
         this.author = author;
     }
 
-    public int getBookPerPage() {
-        return bookPerPage;
+    public int getNumOfPage() {
+        return numOfPage;
     }
 
-    public void setBookPerPage(int bookPerPage) {
-        this.bookPerPage = bookPerPage;
+    public void setNumOfPage(int numOfPage) {
+        this.numOfPage = numOfPage;
     }
 
 }

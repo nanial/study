@@ -12,7 +12,7 @@ public class ConditionsOne {
         double a;
         double b;
 
-        try(Scanner scan = new Scanner(System.in)) {
+        try(@SuppressWarnings("") Scanner scan = new Scanner(System.in)) {
             System.out.println("Insert value of angle 'a' :");
              a = scan.nextDouble();
             System.out.println("Insert value of angle 'b' :");

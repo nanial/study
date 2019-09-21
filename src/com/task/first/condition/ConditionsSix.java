@@ -13,7 +13,7 @@ public class ConditionsSix {
         double x;
         double function;
 
-        try(Scanner scan = new Scanner(System.in)) {
+        try(@SuppressWarnings("") Scanner scan = new Scanner(System.in)) {
             System.out.println("Insert value of 'x' :");
             x = scan.nextDouble();
         }

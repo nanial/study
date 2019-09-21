@@ -11,7 +11,7 @@ public class LoopsOne {
         int n;
         int sum = 0;
 
-        try(Scanner scan = new Scanner(System.in)) {
+        try(@SuppressWarnings("") Scanner scan = new Scanner(System.in)) {
             System.out.println("Insert value of 'n' :");
 
             while (!scan.hasNextInt()) {

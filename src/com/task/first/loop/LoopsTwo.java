@@ -15,7 +15,7 @@ public class LoopsTwo {
         int x;
         int function;
 
-        try (Scanner scan = new Scanner(System.in)) {
+        try (@SuppressWarnings("") Scanner scan = new Scanner(System.in)) {
             System.out.println("Insert interval a to b :");
             while (!scan.hasNextInt()) {
                 System.out.println("Insert value of 'a' :");

@@ -57,11 +57,33 @@
     <void property="author">
      <string>Leskov</string>
     </void>
+    <void property="bookId">
+     <int>5</int>
+    </void>
     <void property="description">
-     <string>poem</string>
+     <string>novel</string>
+    </void>
+    <void property="title">
+     <string>Bullshit artist</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="com.finalTask.library.domain.Book">
+    <void property="author">
+     <string>Chehkov</string>
+    </void>
+    <void property="bookId">
+     <int>6</int>
+    </void>
+    <void property="description">
+     <string>novel</string>
     </void>
     <void property="digital">
      <boolean>true</boolean>
+    </void>
+    <void property="title">
+     <string>Duel</string>
     </void>
    </object>
   </void>

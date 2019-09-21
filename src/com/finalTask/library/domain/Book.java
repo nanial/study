@@ -1,10 +1,11 @@
 package com.finalTask.library.domain;
 
 import java.io.Serializable;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class Book implements Serializable {
 
-    private static int count = 0;
+    private static final AtomicInteger count = new AtomicInteger(-1);
     private int bookId;
     private String title;
     private String author;
@@ -16,7 +17,7 @@ public class Book implements Serializable {
 
     public Book(String title, String author, boolean isDigital, String description) {
 
-        setBookId(++count);
+        this.bookId = count.incrementAndGet();
         this.title = title;
         this.author = author;
         this.isDigital = isDigital;

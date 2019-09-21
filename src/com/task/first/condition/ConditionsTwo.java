@@ -16,7 +16,7 @@ public class ConditionsTwo {
         int min2;
         int maxRes;
 
-        try(Scanner scan = new Scanner(System.in)) {
+        try(@SuppressWarnings("") Scanner scan = new Scanner(System.in)) {
             System.out.println("Insert value of 'a' :");
              a = scan.nextInt();
             System.out.println("Insert value of 'b' :");

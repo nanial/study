@@ -11,6 +11,7 @@ public class MyCatalog {
         books.add(new Book("Resurrection", "Tolstoy", false, "novel"));
         books.add(new Book("War and peace", "Tolstoy", true, "novel"));
         books.add(new Book("The Enchanted Wanderer", "Leskov", false, "story"));
+        books.add(new Book("Bullshit artist", "Leskov", false, "novel"));
         books.add(book);
 
         return books;
@@ -31,9 +32,5 @@ public class MyCatalog {
         }
         return books;
     }
-    public void pagination() {
 
-        final int capacityOfPage = 5;
-        int numOfPage = 0;
-    }
 }

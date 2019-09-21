@@ -12,7 +12,7 @@ public class LoopsEight {
         int c;
         int d;
 
-        try(Scanner scan = new Scanner(System.in)) {
+        try(@SuppressWarnings("") Scanner scan = new Scanner(System.in)) {
             System.out.println("Insert value of 'a' :");
 
             while (!scan.hasNextInt()) {

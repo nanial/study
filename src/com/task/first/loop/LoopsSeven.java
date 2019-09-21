@@ -11,7 +11,7 @@ public class LoopsSeven {
     public static void main(String[] args) {
         int m;
         int n;
-        try(Scanner scan = new Scanner(System.in)) {
+        try(@SuppressWarnings("") Scanner scan = new Scanner(System.in)) {
 
             System.out.println("Insert value of interval from 'm' to 'n' " +
                     "'n' and 'm' are natural numbers :");

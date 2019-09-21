@@ -9,6 +9,7 @@ public class Customer implements Serializable {
     private String customerEmail;
     private Object customerPassword;
     private Role role;
+    private PostaElectronica posta;
 
     public Customer() {
     }

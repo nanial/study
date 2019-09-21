@@ -7,45 +7,49 @@ package com.finalTask.library;
 //• Пользователь может просматривать книги в каталоге книг, осуществлять поиск книг в каталоге.+
 //• Администратор может модифицировать каталог.+
 //• *При добавлении описания книги в каталог оповещение о ней рассылается на e-mail всем пользователям+
-//• **При просмотре каталога желательно реализовать постраничный просмотр
+//• **При просмотре каталога желательно реализовать постраничный просмотр+
 //• ***Пользователь может предложить добавить книгу в библиотеку, переслав её администратору на e-mail.+
 //• Каталог книг хранится в текстовом файле.+
 //• Данные аутентификации пользователей хранятся в текстовом файле. Пароль не хранится в открытом виде+
 
+
 import com.finalTask.library.apiBusiness.BookManager;
 import com.finalTask.library.apiBusiness.CustomerManager;
 import com.finalTask.library.business.BookManagerImpl;
+import com.finalTask.library.business.CatalogBuilderFactory;
 import com.finalTask.library.business.CustomerManagerImpl;
 import com.finalTask.library.dao.BookDaoImpl;
-import com.finalTask.library.business.CatalogBuilderFactory;
 import com.finalTask.library.dao.CustomerDaoImpl;
-import com.finalTask.library.domain.*;
+import com.finalTask.library.domain.Book;
+import com.finalTask.library.domain.Customers;
+import com.finalTask.library.domain.MyCatalog;
 import com.finalTask.library.filter.BookFilter;
-
 
 public class Main {
 
     public static void main(String[] args) {
-
-        BookManager bm = new BookManagerImpl(new BookDaoImpl());
-        MyCatalog cat = new CatalogBuilderFactory().getCatalogBuilder().getCatalog();
-        bm.writeBooksInFile(cat.fillCatalog(new Book("Kern", "Chehkov", true, "novel")));
-        bm.getBookList(new BookFilter(null, "The Enchanted Wanderer"));
-
-
         CustomerManager cm = new CustomerManagerImpl(new CustomerDaoImpl());
         cm.addInFileCustomer(new Customers().fillListOfCustomer());
-        cm.getListCustomer();
+        Menu menu = new Menu();
+       // menu.login();
+        menu.userService();
+        //BookManager bm = new BookManagerImpl(new BookDaoImpl());
+       // bm.getBookList(new BookFilter(3));
+        /*MyCatalog cat = new CatalogBuilderFactory().getCatalogBuilder().getCatalog();
+        bm.writeBooksInFile(cat.fillCatalog(new Book("Ward #6", "Chehkov", true, "novel")));
+        bm.getBookList(null);*/
 
-        bm.writeBooksInFile(cat.updateBook(1, true, "poem"));
+        /*bm.writeBooksInFile(cat.updateBook(1, true, "poem"));
         bm.getBookList(new BookFilter(3));
+
         Customer admin = new Customer("admin@admin.lib", Role.ADMIN);
         admin.setCustomerPassword("admin");
+
         Customer c1 = new Customer("aleco@tut.bz", Role.USER);
         c1.setCustomerPassword("As45793");
         cm.sendEmail(c1.getCustomerEmail(), admin.getCustomerEmail(), //enter customer's data
                 admin.getCustomerPassword().toString(), new Book().toString()); //only for stub
         cm.sendEmail(admin.getCustomerEmail(), c1.getCustomerEmail(),
-                c1.getCustomerPassword().toString(), new Book().toString());
+                c1.getCustomerPassword().toString(), new Book().toString());*/
     }
 }
