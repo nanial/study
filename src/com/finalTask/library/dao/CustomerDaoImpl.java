@@ -3,19 +3,10 @@ package com.finalTask.library.dao;
 import com.finalTask.library.apiDao.CustomerDao;
 import com.finalTask.library.domain.Book;
 import com.finalTask.library.domain.Customer;
-
-
-import javax.mail.Message;
-import javax.mail.MessagingException;
-import javax.mail.Session;
-import javax.mail.Transport;
-import javax.mail.internet.InternetAddress;
-import javax.mail.internet.MimeMessage;
 import java.beans.XMLDecoder;
 import java.beans.XMLEncoder;
 import java.io.*;
 import java.util.ArrayList;
-import java.util.Properties;
 
 public class CustomerDaoImpl implements CustomerDao {
     @Override
@@ -49,38 +40,9 @@ public class CustomerDaoImpl implements CustomerDao {
     }
 
     @Override
-    public void sendEmail(String to, String from, String pass, String mess) {
+    public void sendEmail(Customer customer, Book book) {
 
-
-        Properties properties = new Properties();
-        properties.put("mail.smtp.auth", true);
-        properties.put("mail.smtp.starttls.enable", true);
-        properties.put("mail.smtp.host", "smtp.gmail.com");//for example
-        properties.put("mail.smtp.port", 587);//for example
-        properties.setProperty("mail.smtp.ssl.trust", "smtp.gmail.com");//for example
-
-        Session session = Session.getDefaultInstance(properties,  new javax.mail.Authenticator() {
-            protected javax.mail.PasswordAuthentication getPasswordAuthentication() {
-                return new javax.mail.PasswordAuthentication(from, pass);
-            }
-        });
-
-        try{
-            MimeMessage message = new MimeMessage(session);
-            message.setFrom(new InternetAddress(from));
-            message.addRecipient(Message.RecipientType.TO,new InternetAddress(to));
-            message.setSubject("Notification");
-            message.setText(mess);
-
-            Transport tr = session.getTransport();
-            tr.connect(properties.getProperty(from),
-                    properties.getProperty(pass));
-            tr.sendMessage(message, message.getAllRecipients());
-            tr.close();
-
-        }
-        catch (MessagingException mex) {mex.printStackTrace();}
-
+        customer.getPosta().getInBox().add(book);
     }
 
     @Override

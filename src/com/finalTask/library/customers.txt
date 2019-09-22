@@ -52,5 +52,24 @@
     </void>
    </object>
   </void>
+  <void method="add">
+   <object class="com.finalTask.library.domain.Customer">
+    <void property="customerEmail">
+     <string>admin@admin.lib</string>
+    </void>
+    <void property="customerId">
+     <int>4</int>
+    </void>
+    <void property="customerPassword">
+     <int>92668751</int>
+    </void>
+    <void property="role">
+     <object class="java.lang.Enum" method="valueOf">
+      <class>com.finalTask.library.domain.Role</class>
+      <string>ADMIN</string>
+     </object>
+    </void>
+   </object>
+  </void>
  </object>
 </java>

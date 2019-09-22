@@ -6,15 +6,15 @@ public class Customer implements Serializable {
 
     private static int count = 0;
     private int customerId;
-    private String customerEmail;
+    private String customerEmail;//NAME of email
     private Object customerPassword;
     private Role role;
-    private PostaElectronica posta;
+    private PostaElectronica posta;//email
 
     public Customer() {
     }
 
-    public Customer(String customerEmail, Role role) {
+    public Customer(String customerEmail, Role role, PostaElectronica posta) {
 
         setCustomerId(++count);
         this.customerEmail = customerEmail;
@@ -51,6 +51,14 @@ public class Customer implements Serializable {
 
     public void setRole(Role role) {
         this.role = role;
+    }
+
+    public PostaElectronica getPosta() {
+        return posta;
+    }
+
+    public void setPosta(PostaElectronica posta) {
+        this.posta = posta;
     }
 
     @Override

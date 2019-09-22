@@ -5,7 +5,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 public class Book implements Serializable {
 
-    private static final AtomicInteger count = new AtomicInteger(-1);
+    private static final AtomicInteger count = new AtomicInteger(0);
     private int bookId;
     private String title;
     private String author;

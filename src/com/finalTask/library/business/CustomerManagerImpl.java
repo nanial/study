@@ -26,8 +26,8 @@ public class CustomerManagerImpl implements CustomerManager {
     }
 
     @Override
-    public void sendEmail(String to, String from, String pass, String message) {
-
+    public void sendEmail(Customer customer, Book book) {
+        dao.sendEmail(customer, book);
     }
 
     @Override

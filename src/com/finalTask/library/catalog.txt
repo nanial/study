@@ -7,7 +7,7 @@
      <string>Tolstoy</string>
     </void>
     <void property="bookId">
-     <int>2</int>
+     <int>1</int>
     </void>
     <void property="description">
      <string>novel</string>
@@ -23,7 +23,7 @@
      <string>Tolstoy</string>
     </void>
     <void property="bookId">
-     <int>3</int>
+     <int>2</int>
     </void>
     <void property="description">
      <string>novel</string>
@@ -42,7 +42,7 @@
      <string>Leskov</string>
     </void>
     <void property="bookId">
-     <int>4</int>
+     <int>3</int>
     </void>
     <void property="description">
      <string>story</string>
@@ -58,7 +58,7 @@
      <string>Leskov</string>
     </void>
     <void property="bookId">
-     <int>5</int>
+     <int>4</int>
     </void>
     <void property="description">
      <string>novel</string>
@@ -71,7 +71,26 @@
   <void method="add">
    <object class="com.finalTask.library.domain.Book">
     <void property="author">
-     <string>Chehkov</string>
+     <string>Tolstoy</string>
+    </void>
+    <void property="bookId">
+     <int>5</int>
+    </void>
+    <void property="description">
+     <string>novel</string>
+    </void>
+    <void property="digital">
+     <boolean>true</boolean>
+    </void>
+    <void property="title">
+     <string>Anna Karenyna</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="com.finalTask.library.domain.Book">
+    <void property="author">
+     <string>Tolstoy</string>
     </void>
     <void property="bookId">
      <int>6</int>
@@ -83,7 +102,344 @@
      <boolean>true</boolean>
     </void>
     <void property="title">
-     <string>Duel</string>
+     <string>Family happiness</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="com.finalTask.library.domain.Book">
+    <void property="author">
+     <string>Tolstoy</string>
+    </void>
+    <void property="bookId">
+     <int>7</int>
+    </void>
+    <void property="description">
+     <string>autobiography</string>
+    </void>
+    <void property="digital">
+     <boolean>true</boolean>
+    </void>
+    <void property="title">
+     <string>Childhood</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="com.finalTask.library.domain.Book">
+    <void property="author">
+     <string>Tolstoy</string>
+    </void>
+    <void property="bookId">
+     <int>8</int>
+    </void>
+    <void property="description">
+     <string>autobiography</string>
+    </void>
+    <void property="digital">
+     <boolean>true</boolean>
+    </void>
+    <void property="title">
+     <string>Boyhood</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="com.finalTask.library.domain.Book">
+    <void property="author">
+     <string>Tolstoy</string>
+    </void>
+    <void property="bookId">
+     <int>9</int>
+    </void>
+    <void property="description">
+     <string>short story</string>
+    </void>
+    <void property="title">
+     <string>Snowstorm</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="com.finalTask.library.domain.Book">
+    <void property="author">
+     <string>Tolstoy</string>
+    </void>
+    <void property="bookId">
+     <int>10</int>
+    </void>
+    <void property="description">
+     <string>short story</string>
+    </void>
+    <void property="digital">
+     <boolean>true</boolean>
+    </void>
+    <void property="title">
+     <string>Two Hussars</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="com.finalTask.library.domain.Book">
+    <void property="author">
+     <string>Leskov</string>
+    </void>
+    <void property="bookId">
+     <int>11</int>
+    </void>
+    <void property="description">
+     <string>story</string>
+    </void>
+    <void property="title">
+     <string>The Enchanted Wanderer</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="com.finalTask.library.domain.Book">
+    <void property="author">
+     <string>Leskov</string>
+    </void>
+    <void property="bookId">
+     <int>12</int>
+    </void>
+    <void property="description">
+     <string>novel</string>
+    </void>
+    <void property="title">
+     <string>Bullshit artist</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <null/>
+  </void>
+  <void method="add">
+   <object class="com.finalTask.library.domain.Book">
+    <void property="author">
+     <string>Tolstoy</string>
+    </void>
+    <void property="bookId">
+     <int>14</int>
+    </void>
+    <void property="description">
+     <string>novel</string>
+    </void>
+    <void property="title">
+     <string>Resurrection</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="com.finalTask.library.domain.Book">
+    <void property="author">
+     <string>Tolstoy</string>
+    </void>
+    <void property="bookId">
+     <int>15</int>
+    </void>
+    <void property="description">
+     <string>novel</string>
+    </void>
+    <void property="digital">
+     <boolean>true</boolean>
+    </void>
+    <void property="title">
+     <string>War and peace</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="com.finalTask.library.domain.Book">
+    <void property="author">
+     <string>Leskov</string>
+    </void>
+    <void property="bookId">
+     <int>16</int>
+    </void>
+    <void property="description">
+     <string>story</string>
+    </void>
+    <void property="title">
+     <string>The Enchanted Wanderer</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="com.finalTask.library.domain.Book">
+    <void property="author">
+     <string>Leskov</string>
+    </void>
+    <void property="bookId">
+     <int>17</int>
+    </void>
+    <void property="description">
+     <string>novel</string>
+    </void>
+    <void property="title">
+     <string>Bullshit artist</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="com.finalTask.library.domain.Book">
+    <void property="author">
+     <string>Tolstoy</string>
+    </void>
+    <void property="bookId">
+     <int>18</int>
+    </void>
+    <void property="description">
+     <string>novel</string>
+    </void>
+    <void property="digital">
+     <boolean>true</boolean>
+    </void>
+    <void property="title">
+     <string>Anna Karenyna</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="com.finalTask.library.domain.Book">
+    <void property="author">
+     <string>Tolstoy</string>
+    </void>
+    <void property="bookId">
+     <int>19</int>
+    </void>
+    <void property="description">
+     <string>novel</string>
+    </void>
+    <void property="digital">
+     <boolean>true</boolean>
+    </void>
+    <void property="title">
+     <string>Family happiness</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="com.finalTask.library.domain.Book">
+    <void property="author">
+     <string>Tolstoy</string>
+    </void>
+    <void property="bookId">
+     <int>20</int>
+    </void>
+    <void property="description">
+     <string>autobiography</string>
+    </void>
+    <void property="digital">
+     <boolean>true</boolean>
+    </void>
+    <void property="title">
+     <string>Childhood</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="com.finalTask.library.domain.Book">
+    <void property="author">
+     <string>Tolstoy</string>
+    </void>
+    <void property="bookId">
+     <int>21</int>
+    </void>
+    <void property="description">
+     <string>autobiography</string>
+    </void>
+    <void property="digital">
+     <boolean>true</boolean>
+    </void>
+    <void property="title">
+     <string>Boyhood</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="com.finalTask.library.domain.Book">
+    <void property="author">
+     <string>Tolstoy</string>
+    </void>
+    <void property="bookId">
+     <int>22</int>
+    </void>
+    <void property="description">
+     <string>short story</string>
+    </void>
+    <void property="title">
+     <string>Snowstorm</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="com.finalTask.library.domain.Book">
+    <void property="author">
+     <string>Tolstoy</string>
+    </void>
+    <void property="bookId">
+     <int>23</int>
+    </void>
+    <void property="description">
+     <string>short story</string>
+    </void>
+    <void property="digital">
+     <boolean>true</boolean>
+    </void>
+    <void property="title">
+     <string>Two Hussars</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="com.finalTask.library.domain.Book">
+    <void property="author">
+     <string>Leskov</string>
+    </void>
+    <void property="bookId">
+     <int>24</int>
+    </void>
+    <void property="description">
+     <string>story</string>
+    </void>
+    <void property="title">
+     <string>The Enchanted Wanderer</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="com.finalTask.library.domain.Book">
+    <void property="author">
+     <string>Leskov</string>
+    </void>
+    <void property="bookId">
+     <int>25</int>
+    </void>
+    <void property="description">
+     <string>novel</string>
+    </void>
+    <void property="title">
+     <string>Bullshit artist</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="com.finalTask.library.domain.Book">
+    <void property="author">
+     <string>title</string>
+    </void>
+    <void property="bookId">
+     <int>13</int>
+    </void>
+    <void property="description">
+     <string>story</string>
+    </void>
+    <void property="digital">
+     <boolean>true</boolean>
+    </void>
+    <void property="title">
+     <string>author</string>
     </void>
    </object>
   </void>

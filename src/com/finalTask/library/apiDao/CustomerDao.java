@@ -8,7 +8,7 @@ import java.util.ArrayList;
 public interface CustomerDao {
     ArrayList<Customer> getListCustomer();
     void addInFileCustomer(ArrayList<Customer> customers);
-    void sendEmail(String to, String from, String pass, String message);
+    void sendEmail(Customer customer, Book book);
     void searchCertainBook(Book certainBook);
     void demandOfBook (Book certainBook);
 
