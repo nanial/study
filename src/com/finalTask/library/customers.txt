@@ -12,6 +12,12 @@
     <void property="customerPassword">
      <int>900206174</int>
     </void>
+    <void property="inBox">
+     <object class="java.util.ArrayList"/>
+    </void>
+    <void property="outBox">
+     <object class="java.util.ArrayList"/>
+    </void>
     <void property="role">
      <object class="java.lang.Enum" id="Role0" method="valueOf">
       <class>com.finalTask.library.domain.Role</class>
@@ -31,6 +37,12 @@
     <void property="customerPassword">
      <int>1876603405</int>
     </void>
+    <void property="inBox">
+     <object class="java.util.ArrayList"/>
+    </void>
+    <void property="outBox">
+     <object class="java.util.ArrayList"/>
+    </void>
     <void property="role">
      <object idref="Role0"/>
     </void>
@@ -47,6 +59,12 @@
     <void property="customerPassword">
      <int>-1279649558</int>
     </void>
+    <void property="inBox">
+     <object class="java.util.ArrayList"/>
+    </void>
+    <void property="outBox">
+     <object class="java.util.ArrayList"/>
+    </void>
     <void property="role">
      <object idref="Role0"/>
     </void>
@@ -62,6 +80,12 @@
     </void>
     <void property="customerPassword">
      <int>92668751</int>
+    </void>
+    <void property="inBox">
+     <object class="java.util.ArrayList"/>
+    </void>
+    <void property="outBox">
+     <object class="java.util.ArrayList"/>
     </void>
     <void property="role">
      <object class="java.lang.Enum" method="valueOf">

@@ -53,9 +53,6 @@ public class Menu {
 
     public void userService() {
 
-        Customer admin = new Customer();
-        admin.setPosta(new PostaElectronica(new ArrayList<>(), new ArrayList<>()));
-
         System.out.println("Input 1 for list per page of book, 2 for search certain book," +
                 " 3 for search books of certain author, 4 for offer new book, 5 for escape");
         try (@SuppressWarnings("")
@@ -103,7 +100,13 @@ public class Menu {
                         System.out.println("Write the description of book, please");
                         String description =  new Scanner(System.in).nextLine();
 
-                        cm.sendEmail(admin, new Book(author, title, isDigital, description));
+                        for (Customer c : customers) {
+                            if (c.getRole() ==Role.ADMIN){
+                                cm.sendEmail(c, new Book(author, title, isDigital, description));
+                                //c.getInBox().forEach(System.out::println);
+                            }
+                        }
+
                         System.out.println("Your offer have been sended");
 
                         Book offerBook = new Book();
@@ -115,7 +118,7 @@ public class Menu {
 
                         bm.writeBooksInFile(cat.fillCatalog(offerBook));
 
-                        admin.getPosta().getInBox().forEach(System.out::println);
+                       // admin.getInBox().forEach(System.out::println);
                         System.out.println("Choice next operation");
                         choice = scan.nextInt();
                         break;
@@ -185,7 +188,7 @@ public class Menu {
 
                         for (Customer c : customers) {
                             cm.sendEmail(c, newBook );
-                           // c.getPosta().getInBox().forEach(System.out::println);
+                            //c.getInBox().forEach(System.out::println);
                         }
                         choice = scan.nextInt();
                         break;

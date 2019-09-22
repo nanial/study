@@ -42,7 +42,7 @@ public class CustomerDaoImpl implements CustomerDao {
     @Override
     public void sendEmail(Customer customer, Book book) {
 
-        customer.getPosta().getInBox().add(book);
+        customer.getInBox().add(book);
     }
 
     @Override

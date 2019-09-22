@@ -1,6 +1,7 @@
 package com.finalTask.library.domain;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 
 public class Customer implements Serializable {
 
@@ -9,16 +10,19 @@ public class Customer implements Serializable {
     private String customerEmail;//NAME of email
     private Object customerPassword;
     private Role role;
-    private PostaElectronica posta;//email
+    private ArrayList<Book> inBox;
+    private ArrayList<Book> outBox;
 
     public Customer() {
     }
 
-    public Customer(String customerEmail, Role role, PostaElectronica posta) {
+    public Customer(String customerEmail, Role role) {
 
         setCustomerId(++count);
         this.customerEmail = customerEmail;
         this.role = role;
+        this.inBox = new ArrayList<>();
+        this.outBox = new ArrayList<>();
     }
 
     public void setCustomerId(int customerId) {
@@ -53,12 +57,20 @@ public class Customer implements Serializable {
         this.role = role;
     }
 
-    public PostaElectronica getPosta() {
-        return posta;
+    public ArrayList<Book> getInBox() {
+        return inBox;
     }
 
-    public void setPosta(PostaElectronica posta) {
-        this.posta = posta;
+    public void setInBox(ArrayList<Book> inBox) {
+        this.inBox = inBox;
+    }
+
+    public ArrayList<Book> getOutBox() {
+        return outBox;
+    }
+
+    public void setOutBox(ArrayList<Book> outBox) {
+        this.outBox = outBox;
     }
 
     @Override
