@@ -7,7 +7,7 @@
      <string>Tolstoy</string>
     </void>
     <void property="bookId">
-     <int>1</int>
+     <int>2</int>
     </void>
     <void property="description">
      <string>novel</string>
@@ -23,7 +23,7 @@
      <string>Tolstoy</string>
     </void>
     <void property="bookId">
-     <int>2</int>
+     <int>3</int>
     </void>
     <void property="description">
      <string>novel</string>
@@ -42,7 +42,7 @@
      <string>Leskov</string>
     </void>
     <void property="bookId">
-     <int>3</int>
+     <int>4</int>
     </void>
     <void property="description">
      <string>story</string>
@@ -58,32 +58,13 @@
      <string>Leskov</string>
     </void>
     <void property="bookId">
-     <int>4</int>
+     <int>5</int>
     </void>
     <void property="description">
      <string>novel</string>
     </void>
     <void property="title">
      <string>Bullshit artist</string>
-    </void>
-   </object>
-  </void>
-  <void method="add">
-   <object class="com.finalTask.library.domain.Book">
-    <void property="author">
-     <string>Tolstoy</string>
-    </void>
-    <void property="bookId">
-     <int>5</int>
-    </void>
-    <void property="description">
-     <string>novel</string>
-    </void>
-    <void property="digital">
-     <boolean>true</boolean>
-    </void>
-    <void property="title">
-     <string>Anna Karenyna</string>
     </void>
    </object>
   </void>
@@ -102,7 +83,7 @@
      <boolean>true</boolean>
     </void>
     <void property="title">
-     <string>Family happiness</string>
+     <string>Anna Karenyna</string>
     </void>
    </object>
   </void>
@@ -115,13 +96,13 @@
      <int>7</int>
     </void>
     <void property="description">
-     <string>autobiography</string>
+     <string>novel</string>
     </void>
     <void property="digital">
      <boolean>true</boolean>
     </void>
     <void property="title">
-     <string>Childhood</string>
+     <string>Family happiness</string>
     </void>
    </object>
   </void>
@@ -140,7 +121,7 @@
      <boolean>true</boolean>
     </void>
     <void property="title">
-     <string>Boyhood</string>
+     <string>Childhood</string>
     </void>
    </object>
   </void>
@@ -151,6 +132,25 @@
     </void>
     <void property="bookId">
      <int>9</int>
+    </void>
+    <void property="description">
+     <string>autobiography</string>
+    </void>
+    <void property="digital">
+     <boolean>true</boolean>
+    </void>
+    <void property="title">
+     <string>Boyhood</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="com.finalTask.library.domain.Book">
+    <void property="author">
+     <string>Tolstoy</string>
+    </void>
+    <void property="bookId">
+     <int>10</int>
     </void>
     <void property="description">
      <string>short story</string>
@@ -166,7 +166,7 @@
      <string>Tolstoy</string>
     </void>
     <void property="bookId">
-     <int>10</int>
+     <int>11</int>
     </void>
     <void property="description">
      <string>short story</string>
@@ -185,7 +185,7 @@
      <string>Leskov</string>
     </void>
     <void property="bookId">
-     <int>11</int>
+     <int>12</int>
     </void>
     <void property="description">
      <string>story</string>
@@ -201,18 +201,34 @@
      <string>Leskov</string>
     </void>
     <void property="bookId">
-     <int>12</int>
+     <int>13</int>
     </void>
     <void property="description">
      <string>novel</string>
     </void>
     <void property="title">
-     <string>Bullshit artist</string>
+     <string>The Sealed Angel</string>
     </void>
    </object>
   </void>
   <void method="add">
-   <null/>
+   <object class="com.finalTask.library.domain.Book">
+    <void property="author">
+     <string>title</string>
+    </void>
+    <void property="bookId">
+     <int>1</int>
+    </void>
+    <void property="description">
+     <string>poem</string>
+    </void>
+    <void property="digital">
+     <boolean>true</boolean>
+    </void>
+    <void property="title">
+     <string>author</string>
+    </void>
+   </object>
   </void>
  </object>
 </java>

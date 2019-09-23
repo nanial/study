@@ -18,6 +18,7 @@ public class Menu {
 
     CustomerManager cm = new CustomerManagerImpl(new CustomerDaoImpl());
     BookManager bm = new BookManagerImpl(new BookDaoImpl());
+
     MyCatalog cat = new CatalogBuilderFactory().getCatalogBuilder().getCatalog();
     ArrayList<Customer> customers = cm.getListCustomer();
 

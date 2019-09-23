@@ -19,7 +19,7 @@ public class MyCatalog {
         books.add(new Book("Snowstorm", "Tolstoy", false, "short story"));
         books.add(new Book("Two Hussars", "Tolstoy", true, "short story"));
         books.add(new Book("The Enchanted Wanderer", "Leskov", false, "story"));
-        books.add(new Book("Bullshit artist", "Leskov", false, "novel"));
+        books.add(new Book("The Sealed Angel", "Leskov", false, "novel"));
         books.add(book);
 
         return books;
