@@ -26,6 +26,7 @@ import com.finalTask.library.domain.MyCatalog;
 public class Main {
 
     public static void main(String[] args) {
+
         CustomerManager cm = new CustomerManagerImpl(new CustomerDaoImpl());
         cm.addInFileCustomer(new Customers().fillListOfCustomer());
 
@@ -34,5 +35,6 @@ public class Main {
         bm.writeBooksInFile(cat.fillCatalog(null));
 
         new Menu().login();
+
     }
 }

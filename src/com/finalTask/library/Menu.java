@@ -10,9 +10,9 @@ import com.finalTask.library.dao.BookDaoImpl;
 import com.finalTask.library.dao.CustomerDaoImpl;
 import com.finalTask.library.domain.*;
 import com.finalTask.library.filter.BookFilter;
-
 import java.util.ArrayList;
 import java.util.Scanner;
+
 
 public class Menu {
 
@@ -26,7 +26,13 @@ public class Menu {
 
         try (@SuppressWarnings("")
              Scanner scan = new Scanner(System.in);) {
+
             System.out.println("Input your Email");
+            while (!scan.hasNext("^([_a-zA-Z0-9-]+(\\.[_a-zA-Z0-9-]+)*" +
+                    "@[a-zA-Z0-9-]+(\\.[a-zA-Z0-9-]+)*(\\.[a-zA-Z]{1,6}))?$")){
+                System.out.println("Input your Email");
+                scan.next();
+            }
             String customerEmail = scan.next("^([_a-zA-Z0-9-]+(\\.[_a-zA-Z0-9-]+)*" +
                     "@[a-zA-Z0-9-]+(\\.[a-zA-Z0-9-]+)*(\\.[a-zA-Z]{1,6}))?$");
 
@@ -45,7 +51,10 @@ public class Menu {
                         System.out.println("Hello, admin");
                         this.adminPanel();
                     }
-
+                }
+                else {
+                    System.out.println("Try again to input the data correctly");
+                    System.exit(1);
                 }
             }
         }
@@ -68,6 +77,10 @@ public class Menu {
                         System.out.println("Enter number of page");
                         bm.getBookList(new BookFilter(new Scanner(System.in).nextInt()));
                         System.out.println("Choice next operation");
+                        while (!scan.hasNextInt()){
+                            System.out.println("Choice next operation");
+                            scan.next();
+                        }
                         choice = scan.nextInt();
                         break;
 
