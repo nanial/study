@@ -29,14 +29,4 @@ public class CustomerManagerImpl implements CustomerManager {
     public void sendEmail(Customer customer, Book book) {
         dao.sendEmail(customer, book);
     }
-
-    @Override
-    public void searchCertainBook(Book certainBook) {
-
-    }
-
-    @Override
-    public void demandOfBook(Book certainBook) {
-
-    }
 }

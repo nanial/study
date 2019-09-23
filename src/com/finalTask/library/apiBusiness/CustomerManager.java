@@ -10,7 +10,4 @@ public interface CustomerManager {
     ArrayList<Customer> getListCustomer();
     void addInFileCustomer(ArrayList<Customer> customers);
     void sendEmail(Customer customer, Book book);
-    void searchCertainBook(Book certainBook);
-    void demandOfBook (Book certainBook);
-
 }

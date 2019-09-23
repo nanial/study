@@ -39,6 +39,7 @@ public class Menu {
             System.out.println("Input your password");
             String customerPass = scan.next();
 
+
             for (Customer c : customers) {
 
                 if (c.getCustomerEmail().equals(customerEmail) &&
@@ -52,10 +53,7 @@ public class Menu {
                         this.adminPanel();
                     }
                 }
-                else {
-                    System.out.println("Try again to input the data correctly");
-                    System.exit(1);
-                }
+
             }
         }
     }

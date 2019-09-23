@@ -29,6 +29,7 @@ public class Main {
 
         CustomerManager cm = new CustomerManagerImpl(new CustomerDaoImpl());
         cm.addInFileCustomer(new Customers().fillListOfCustomer());
+        cm.getListCustomer();
 
         BookManager bm = new BookManagerImpl(new BookDaoImpl());
         MyCatalog cat = new CatalogBuilderFactory().getCatalogBuilder().getCatalog();

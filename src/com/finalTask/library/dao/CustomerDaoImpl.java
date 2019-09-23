@@ -44,14 +44,4 @@ public class CustomerDaoImpl implements CustomerDao {
 
         customer.getInBox().add(book);
     }
-
-    @Override
-    public void searchCertainBook(Book certainBook) {
-
-    }
-
-    @Override
-    public void demandOfBook(Book certainBook) {
-
-    }
 }
