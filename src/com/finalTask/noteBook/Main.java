@@ -7,7 +7,7 @@ package com.finalTask.noteBook;
 //работы – сохраняться в файл.+
 //• У пользователя должна быть возможность найти запись по любому параметру+
 //или по группе параметров (группу параметров можно определить самостоятельно),+
-// получить требуемые записи в отсортированном виде,
+// получить требуемые записи в отсортированном виде,+
 // найти записи, текстовое поле которой содержит определенное слово,+
 // а также добавить новую запись.+
 //• Особое условие: поиск, сравнение и валидацию вводимой информации
@@ -23,7 +23,6 @@ import com.finalTask.noteBook.dao.NotebookDaoImpl;
 import com.finalTask.noteBook.domain.Notebook;
 import com.finalTask.noteBook.filter.Filter;
 
-
 public class Main {
 
     public static void main(String[] args) throws NullPointerException{
@@ -32,6 +31,8 @@ public class Main {
         NotebookDao nd = new NotebookDaoImpl();
         NotebookManager nm = new NotebookManagerImpl(nd);
         nm.writeInFileNote(not.addNoteInList());
-        System.out.println(nm.getListNote(new Filter("forget")));
+        nm.getListNote(new Filter("for"));
+        System.out.println("/////////////////////");
+        nm.sortDate().forEach(System.out::println);
     }
 }

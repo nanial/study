@@ -6,6 +6,7 @@ import com.finalTask.noteBook.domain.Note;
 import com.finalTask.noteBook.filter.Filter;
 
 import java.util.ArrayList;
+import java.util.Set;
 
 public class NotebookManagerImpl implements NotebookManager {
 
@@ -23,5 +24,10 @@ public class NotebookManagerImpl implements NotebookManager {
     @Override
     public void writeInFileNote(ArrayList<Note> notes) {
         dao.writeInFileNote(notes);
+    }
+
+    @Override
+    public Set<Note> sortDate(){
+        return dao.sortDate();
     }
 }

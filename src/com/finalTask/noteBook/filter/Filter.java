@@ -10,6 +10,7 @@ public class Filter {
     private String message;
     private String certainWord;
 
+
     public Filter(String theme, LocalDate dateOfEdit, String email, String message) {
         this.theme = theme;
         this.dateOfEdit = dateOfEdit;

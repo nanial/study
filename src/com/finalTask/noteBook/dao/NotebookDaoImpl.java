@@ -1,5 +1,6 @@
 package com.finalTask.noteBook.dao;
 
+import com.finalTask.noteBook.Comparator.NoteComparator;
 import com.finalTask.noteBook.domain.Note;
 import com.finalTask.noteBook.apiDao.NotebookDao;
 import com.finalTask.noteBook.filter.Filter;
@@ -8,6 +9,8 @@ import java.beans.*;
 import java.io.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Set;
+import java.util.TreeSet;
 
 public class NotebookDaoImpl implements NotebookDao {
 
@@ -95,9 +98,9 @@ public class NotebookDaoImpl implements NotebookDao {
             encoder.setPersistenceDelegate(LocalDate.class, new PersistenceDelegate() {
 
                 @Override
-                protected Expression instantiate(Object ldInstance, Encoder out) {
-                    return new Expression(ldInstance, LocalDate.class, "parse",
-                            new Object[]{ldInstance.toString()});
+                protected Expression instantiate(Object oldInstance, Encoder out) {
+                    return new Expression(oldInstance, LocalDate.class, "parse",
+                            new Object[]{oldInstance.toString()});
                 }
             });
 
@@ -108,5 +111,12 @@ public class NotebookDaoImpl implements NotebookDao {
 
         encoder.writeObject(notes);
         encoder.close();
+    }
+
+    @Override
+    public Set<Note> sortDate() {
+        Set<Note> noteSet = new TreeSet<>(new NoteComparator());
+        noteSet.addAll(this.getListNote(null));
+        return noteSet;
     }
 }

@@ -5,7 +5,7 @@
    <object class="com.finalTask.noteBook.domain.Note">
     <void property="dateOfEdit">
      <object class="java.time.LocalDate" method="parse">
-      <string>2019-01-12</string>
+      <string>2019-10-12</string>
      </object>
     </void>
     <void property="email">
@@ -47,7 +47,7 @@
    <object class="com.finalTask.noteBook.domain.Note">
     <void property="dateOfEdit">
      <object class="java.time.LocalDate" method="parse">
-      <string>2019-09-13</string>
+      <string>2019-03-13</string>
      </object>
     </void>
     <void property="email">
@@ -60,7 +60,7 @@
      <int>3</int>
     </void>
     <void property="theme">
-     <string>Repair plan</string>
+     <string>Repair for plan</string>
     </void>
    </object>
   </void>
