@@ -69,7 +69,7 @@ public class NotebookDaoImpl implements NotebookDao {
                 }
                 if(filter.getCertainWord() != null){
 
-                    for (Note n : notes) {
+                    for (Note n : this.sortDate()) {
 
                         if(n.getTheme().contains(filter.getCertainWord().toString()) ||
                         n.getMessage().contains(filter.getCertainWord().toString())){
