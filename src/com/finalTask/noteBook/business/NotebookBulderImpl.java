@@ -1,6 +1,6 @@
 package com.finalTask.noteBook.business;
 
-import com.finalTask.noteBook.Notebook;
+import com.finalTask.noteBook.domain.Notebook;
 import com.finalTask.noteBook.apiBusiness.NotebookBuilder;
 
 public class NotebookBulderImpl implements NotebookBuilder {
@@ -8,13 +8,8 @@ public class NotebookBulderImpl implements NotebookBuilder {
     private Notebook notebook;
     private static NotebookBulderImpl instance;
 
-    public NotebookBulderImpl(Notebook notebook) {
-
-        this.notebook = new Notebook();
-    }
-
     public NotebookBulderImpl() {
-
+        this.notebook = new Notebook();
     }
 
     synchronized public static  NotebookBulderImpl getInstance() {

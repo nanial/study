@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="10.0.2" class="java.beans.XMLDecoder">
+ <object class="java.util.ArrayList">
+  <void method="add">
+   <object class="com.finalTask.noteBook.domain.Note">
+    <void property="dateOfEdit">
+     <object class="java.time.LocalDate" method="parse">
+      <string>2019-01-12</string>
+     </object>
+    </void>
+    <void property="email">
+     <string>notes01@mail.ru</string>
+    </void>
+    <void property="message">
+     <string>don&apos;t forget to buy..</string>
+    </void>
+    <void property="noteId">
+     <int>1</int>
+    </void>
+    <void property="theme">
+     <string>Shopping list</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="com.finalTask.noteBook.domain.Note">
+    <void property="dateOfEdit">
+     <object class="java.time.LocalDate" method="parse">
+      <string>2019-08-14</string>
+     </object>
+    </void>
+    <void property="email">
+     <string>guest01@mail.ru</string>
+    </void>
+    <void property="message">
+     <string>Welcome to the party!</string>
+    </void>
+    <void property="noteId">
+     <int>2</int>
+    </void>
+    <void property="theme">
+     <string>Invite sheet</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="com.finalTask.noteBook.domain.Note">
+    <void property="dateOfEdit">
+     <object class="java.time.LocalDate" method="parse">
+      <string>2019-09-13</string>
+     </object>
+    </void>
+    <void property="email">
+     <string>fixes01@mail.ru</string>
+    </void>
+    <void property="message">
+     <string>Sequence of work</string>
+    </void>
+    <void property="noteId">
+     <int>3</int>
+    </void>
+    <void property="theme">
+     <string>Repair plan</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="com.finalTask.noteBook.domain.Note">
+    <void property="dateOfEdit">
+     <object class="java.time.LocalDate" method="parse">
+      <string>2019-12-31</string>
+     </object>
+    </void>
+    <void property="email">
+     <string>movies19@mail.ru</string>
+    </void>
+    <void property="message">
+     <string>Will be complete at last moment of year</string>
+    </void>
+    <void property="noteId">
+     <int>4</int>
+    </void>
+    <void property="theme">
+     <string>Recommended movies</string>
+    </void>
+   </object>
+  </void>
+ </object>
+</java>

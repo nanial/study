@@ -1,6 +1,6 @@
 package com.finalTask.noteBook.apiBusiness;
 
-import com.finalTask.noteBook.Notebook;
+import com.finalTask.noteBook.domain.Notebook;
 
 public interface NotebookBuilder {
 

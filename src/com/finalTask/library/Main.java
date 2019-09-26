@@ -12,21 +12,9 @@ package com.finalTask.library;
 //• Каталог книг хранится в текстовом файле.+
 //• Данные аутентификации пользователей хранятся в текстовом файле. Пароль не хранится в открытом виде+
 
-import com.finalTask.library.apiBusiness.BookManager;
-import com.finalTask.library.apiBusiness.CustomerManager;
-import com.finalTask.library.business.BookManagerImpl;
-import com.finalTask.library.business.CatalogBuilderFactory;
-import com.finalTask.library.business.CustomerManagerImpl;
-import com.finalTask.library.dao.BookDaoImpl;
-import com.finalTask.library.dao.CustomerDaoImpl;
-import com.finalTask.library.domain.Customers;
-import com.finalTask.library.domain.MyCatalog;
-
-
 public class Main {
 
     public static void main(String[] args) {
-
 
         new Menu().login();
 

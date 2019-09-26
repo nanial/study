@@ -11,7 +11,9 @@ import java.io.*;
 import java.util.ArrayList;
 
 public class BookDaoImpl implements BookDao{
+
     private final int CAPACITY = 4;
+
     @Override
     public ArrayList<Book> getBookList(BookFilter filter) {
 
@@ -30,6 +32,7 @@ public class BookDaoImpl implements BookDao{
                         for(Book b: books) {
 
                             if (b.getAuthor().equals(filter.getAuthor())) {
+
                                 System.out.println(b.toString());
                             }
                         }
@@ -39,6 +42,7 @@ public class BookDaoImpl implements BookDao{
                         for(Book b: books) {
 
                             if (b.getTitle().equals(filter.getTitle())) {
+
                                 System.out.println(b.toString());
                             }
                         }
@@ -49,6 +53,7 @@ public class BookDaoImpl implements BookDao{
 
                             if (b.getBookId() > (filter.getNumOfPage() - 1) * CAPACITY &&
                                     b.getBookId() <= filter.getNumOfPage() * CAPACITY) {
+
                                 System.out.println(b.toString());
                             }
                         }

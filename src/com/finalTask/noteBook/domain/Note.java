@@ -1,8 +1,13 @@
-package com.finalTask.noteBook;
+package com.finalTask.noteBook.domain;
 
+import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.concurrent.atomic.AtomicInteger;
 
-public class Note {
+public class Note implements Serializable {
+
+    private static final AtomicInteger count = new AtomicInteger(0);
+    private int noteId;
     private String theme;
     private LocalDate dateOfEdit;
     private String email;
@@ -12,10 +17,20 @@ public class Note {
     }
 
     public Note(String subject, LocalDate dateOfEdit, String email, String message) {
+
+        this.noteId = count.incrementAndGet();
         this.theme = subject;
         this.dateOfEdit = dateOfEdit;
         this.email = email;
         this.message = message;
+    }
+
+    public int getNoteId() {
+        return noteId;
+    }
+
+    public void setNoteId(int noteId) {
+        this.noteId = noteId;
     }
 
     public String getTheme() {
@@ -50,4 +65,14 @@ public class Note {
         this.message = message;
     }
 
+    @Override
+    public String toString() {
+        return "Note{" +
+                "noteId=" + noteId +
+                ", theme='" + theme + '\'' +
+                ", dateOfEdit=" + dateOfEdit +
+                ", email='" + email + '\'' +
+                ", message='" + message + '\'' +
+                '}';
+    }
 }
