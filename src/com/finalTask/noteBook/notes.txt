@@ -68,6 +68,27 @@
    <object class="com.finalTask.noteBook.domain.Note">
     <void property="dateOfEdit">
      <object class="java.time.LocalDate" method="parse">
+      <string>2019-03-13</string>
+     </object>
+    </void>
+    <void property="email">
+     <string>job01@mail.ru</string>
+    </void>
+    <void property="message">
+     <string>List of employees</string>
+    </void>
+    <void property="noteId">
+     <int>4</int>
+    </void>
+    <void property="theme">
+     <string>Work plan</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="com.finalTask.noteBook.domain.Note">
+    <void property="dateOfEdit">
+     <object class="java.time.LocalDate" method="parse">
       <string>2019-12-31</string>
      </object>
     </void>
@@ -78,10 +99,31 @@
      <string>Will be complete at last moment of year</string>
     </void>
     <void property="noteId">
-     <int>4</int>
+     <int>5</int>
     </void>
     <void property="theme">
      <string>Recommended movies</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="com.finalTask.noteBook.domain.Note">
+    <void property="dateOfEdit">
+     <object class="java.time.LocalDate" method="parse">
+      <string>2019-01-12</string>
+     </object>
+    </void>
+    <void property="email">
+     <string>dayes01@mail.ru</string>
+    </void>
+    <void property="message">
+     <string>birthday of family members</string>
+    </void>
+    <void property="noteId">
+     <int>6</int>
+    </void>
+    <void property="theme">
+     <string>Memory</string>
     </void>
    </object>
   </void>

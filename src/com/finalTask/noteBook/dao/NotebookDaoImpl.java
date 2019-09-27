@@ -39,7 +39,7 @@ public class NotebookDaoImpl implements NotebookDao {
                 }
                 if(filter.getEmail() != null){
 
-                    for (Note n : notes) {
+                    for (Note n : this.sortDate()) {
 
                         if(n.getEmail().equals(filter.getEmail())){
 
@@ -49,7 +49,7 @@ public class NotebookDaoImpl implements NotebookDao {
                 }
                 if(filter.getMessage() != null){
 
-                    for (Note n : notes) {
+                    for (Note n : this.sortDate()) {
 
                         if(n.getMessage().equals(filter.getMessage())){
 
@@ -59,7 +59,7 @@ public class NotebookDaoImpl implements NotebookDao {
                 }
                 if(filter.getTheme() != null){
 
-                    for (Note n : notes) {
+                    for (Note n : this.sortDate()) {
 
                         if(n.getTheme().equals(filter.getTheme())){
 

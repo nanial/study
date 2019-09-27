@@ -11,17 +11,20 @@ package com.finalTask.noteBook;
 // найти записи, текстовое поле которой содержит определенное слово,+
 // а также добавить новую запись.+
 //• Особое условие: поиск, сравнение и валидацию вводимой информации
-//осуществлять с использованием регулярных выражений.
+//осуществлять с использованием регулярных выражений.+
 //• Особое условие: проверку введенной информации на валидность должен
-//осуществлять код, непосредственно добавляющий информацию.
+//осуществлять код, непосредственно добавляющий информацию.+
 
 import com.finalTask.noteBook.apiBusiness.NotebookManager;
 import com.finalTask.noteBook.apiDao.NotebookDao;
 import com.finalTask.noteBook.business.NotebookBuilderFactory;
 import com.finalTask.noteBook.business.NotebookManagerImpl;
 import com.finalTask.noteBook.dao.NotebookDaoImpl;
+import com.finalTask.noteBook.domain.Note;
 import com.finalTask.noteBook.domain.Notebook;
 import com.finalTask.noteBook.filter.Filter;
+
+import java.time.LocalDate;
 
 public class Main {
 
@@ -30,9 +33,11 @@ public class Main {
         Notebook not = new NotebookBuilderFactory().getNotebookBuilder().getNotebook();
         NotebookDao nd = new NotebookDaoImpl();
         NotebookManager nm = new NotebookManagerImpl(nd);
-        nm.writeInFileNote(not.addNoteInList());
+        nm.writeInFileNote(not.fillNoteList());
+        nm.writeInFileNote(not.addNewNote(new Note("Memory", "2019-01-12",
+                "dayes01@mail.ru", "birthday of family members")));
         nm.getListNote(new Filter("for"));
         System.out.println("/////////////////////");
-        nm.sortDate().forEach(System.out::println);
+        nm.getListNote(new Filter(null, LocalDate.parse("2019-01-12"), null, null));
     }
 }
