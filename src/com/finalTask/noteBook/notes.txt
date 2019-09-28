@@ -106,26 +106,5 @@
     </void>
    </object>
   </void>
-  <void method="add">
-   <object class="com.finalTask.noteBook.domain.Note">
-    <void property="dateOfEdit">
-     <object class="java.time.LocalDate" method="parse">
-      <string>2019-01-12</string>
-     </object>
-    </void>
-    <void property="email">
-     <string>dayes01@mail.ru</string>
-    </void>
-    <void property="message">
-     <string>birthday of family members</string>
-    </void>
-    <void property="noteId">
-     <int>6</int>
-    </void>
-    <void property="theme">
-     <string>Memory</string>
-    </void>
-   </object>
-  </void>
  </object>
 </java>

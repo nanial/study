@@ -15,29 +15,13 @@ package com.finalTask.noteBook;
 //• Особое условие: проверку введенной информации на валидность должен
 //осуществлять код, непосредственно добавляющий информацию.+
 
-import com.finalTask.noteBook.apiBusiness.NotebookManager;
-import com.finalTask.noteBook.apiDao.NotebookDao;
-import com.finalTask.noteBook.business.NotebookBuilderFactory;
-import com.finalTask.noteBook.business.NotebookManagerImpl;
-import com.finalTask.noteBook.dao.NotebookDaoImpl;
-import com.finalTask.noteBook.domain.Note;
-import com.finalTask.noteBook.domain.Notebook;
-import com.finalTask.noteBook.filter.Filter;
-
-import java.time.LocalDate;
-
 public class Main {
 
     public static void main(String[] args) throws NullPointerException{
 
-        Notebook not = new NotebookBuilderFactory().getNotebookBuilder().getNotebook();
-        NotebookDao nd = new NotebookDaoImpl();
-        NotebookManager nm = new NotebookManagerImpl(nd);
-        nm.writeInFileNote(not.fillNoteList());
-        nm.writeInFileNote(not.addNewNote(new Note("Memory", "2019-01-12",
-                "dayes01@mail.ru", "birthday of family members")));
-        nm.getListNote(new Filter("for"));
-        System.out.println("/////////////////////");
-        nm.getListNote(new Filter(null, LocalDate.parse("2019-01-12"), null, null));
+        Menu menu = new Menu();
+        menu.nm.writeInFileNote(menu.not.fillNoteList());
+        menu.service();
+
     }
 }

@@ -12,11 +12,16 @@ package com.finalTask.library;
 //• Каталог книг хранится в текстовом файле.+
 //• Данные аутентификации пользователей хранятся в текстовом файле. Пароль не хранится в открытом виде+
 
+import com.finalTask.library.domain.Customers;
+
 public class Main {
 
     public static void main(String[] args) {
 
-        new Menu().login();
+        Menu menu =  new Menu();
+        menu.bm.writeBooksInFile(menu.cat.fillCatalog(null));
+        menu.cm.addInFileCustomer(new Customers().fillListOfCustomer());
+        menu.login();
 
     }
 }

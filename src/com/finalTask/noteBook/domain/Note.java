@@ -18,10 +18,10 @@ public class Note implements Serializable {
     public Note() {
     }
 
-    public Note(String subject, String dateOfEdit, String email, String message) {
+    public Note(String theme, String dateOfEdit, String email, String message) {
 
         this.noteId = count.incrementAndGet();
-        this.theme = subject;
+        this.theme = theme;
         this.dateOfEdit = LocalDate.parse(this.validateDate(dateOfEdit));
         this.email = this.validateEmail(email);
         this.message = message;

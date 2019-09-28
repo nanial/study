@@ -23,14 +23,16 @@ public class Menu {
     ArrayList<Customer> customers = cm.getListCustomer();
 
 
+
     public void login() {
 
         try (@SuppressWarnings("")
-             Scanner scan = new Scanner(System.in);) {
+             Scanner scan = new Scanner(System.in)) {
 
             System.out.println("Input your Email");
             while (!scan.hasNext("^([_a-zA-Z0-9-]+(\\.[_a-zA-Z0-9-]+)*" +
                     "@[a-zA-Z0-9-]+(\\.[a-zA-Z0-9-]+)*(\\.[a-zA-Z]{1,6}))?$")){
+
                 System.out.println("Input your Email");
                 scan.next();
             }
@@ -39,7 +41,6 @@ public class Menu {
 
             System.out.println("Input your password");
             String customerPass = scan.next();
-
 
             for (Customer c : customers) {
 
@@ -64,10 +65,10 @@ public class Menu {
         System.out.println("Input 1 for list per page of book, 2 for search certain book," +
                 " 3 for search books of certain author, 4 for offer new book, 5 for escape");
         try (@SuppressWarnings("")
-             Scanner scan = new Scanner(System.in);) {
+             Scanner scan = new Scanner(System.in)) {
             int choice = scan.nextInt();
 
-            while (choice != 5) {
+            while (true) {
 
                 switch (choice) {
 
@@ -137,7 +138,7 @@ public class Menu {
 
                     case 5:
                         System.out.println("See you later..");
-                        System.exit(1);
+                        System.exit(0);
 
                     default:
                         System.out.println("You have been incorrect command");
@@ -154,10 +155,10 @@ public class Menu {
         System.out.println("Input 1 for update book, 2 for delete book," +
                 " 3 for add books, 4 for list per page of book, 5 for escape");
         try (@SuppressWarnings("")
-             Scanner scan = new Scanner(System.in);) {
+             Scanner scan = new Scanner(System.in)) {
             int choice = scan.nextInt();
 
-            while (choice != 5) {
+            while (true) {
 
                 switch (choice) {
 
@@ -210,12 +211,16 @@ public class Menu {
                         System.out.println("Enter number of page");
                         bm.getBookList(new BookFilter(new Scanner(System.in).nextInt()));
                         System.out.println("Choice next operation");
+                        while (!scan.hasNextInt()){
+                            System.out.println("Choice next operation");
+                            scan.next();
+                        }
                         choice = scan.nextInt();
                         break;
 
                     case 5:
                         System.out.println("See you later..");
-                        System.exit(1);
+                        System.exit(0);
 
                     default:
                         System.out.println("You have been incorrect command");
