@@ -13,10 +13,10 @@ import java.time.LocalDate;
 import java.util.Scanner;
 
 public class Menu {
+
     Notebook not = new NotebookBuilderFactory().getNotebookBuilder().getNotebook();
     NotebookDao nd = new NotebookDaoImpl();
     NotebookManager nm = new NotebookManagerImpl(nd);
-
 
     public void service() {
 

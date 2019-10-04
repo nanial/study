@@ -1,6 +1,6 @@
-package com.finalTask.Archive.business;
+package com.finalTask.archive.business;
 
-import com.finalTask.Archive.apiBusiness.ArchiveBuilder;
+import com.finalTask.archive.apiBusiness.ArchiveBuilder;
 
 public class ArchiveBuilderFactory {
 

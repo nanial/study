@@ -1,17 +1,13 @@
-package com.finalTask.Archive.domain;
+package com.finalTask.archive.domain;
 
-import java.util.Set;
-import java.util.TreeSet;
+import java.util.ArrayList;
 
 public class Archive {
 
-    private Set<Portfolio> portfolios = new TreeSet<>();
+    private ArrayList<Portfolio> portfolios = new ArrayList<>();
 
-    public Archive() {
-        base();
-    }
 
-    public Set<Portfolio> base(){
+    public ArrayList<Portfolio> base(){
 
         portfolios.add(new Portfolio("Sergey", "Mozhenkov", 12,
                 "Astronomy", 8.3));

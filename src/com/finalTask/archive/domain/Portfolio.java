@@ -1,4 +1,4 @@
-package com.finalTask.Archive.domain;
+package com.finalTask.archive.domain;
 
 import java.io.Serializable;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -12,6 +12,9 @@ public class Portfolio implements Serializable {
     private int numOfGroup;
     private String department;
     private double averageScore;
+
+    public Portfolio() {
+    }
 
     public Portfolio(String name, String lastName, int numOfGroup, String department, double averageScore) {
 
@@ -69,5 +72,17 @@ public class Portfolio implements Serializable {
 
     public void setAverageScore(double averageScore) {
         this.averageScore = averageScore;
+    }
+
+    @Override
+    public String toString() {
+        return "Portfolio{" +
+                "idOfStudent=" + idOfStudent +
+                ", name='" + name + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", numOfGroup=" + numOfGroup +
+                ", department='" + department + '\'' +
+                ", averageScore=" + averageScore +
+                '}';
     }
 }

@@ -1,7 +1,7 @@
-package com.finalTask.Archive.business;
+package com.finalTask.archive.business;
 
-import com.finalTask.Archive.apiBusiness.ArchiveBuilder;
-import com.finalTask.Archive.domain.Archive;
+import com.finalTask.archive.apiBusiness.ArchiveBuilder;
+import com.finalTask.archive.domain.Archive;
 
 public class ArchiveBuilderImpl implements ArchiveBuilder {
 
@@ -13,7 +13,7 @@ public class ArchiveBuilderImpl implements ArchiveBuilder {
         this.archive = new Archive();
     }
 
-    public static ArchiveBuilderImpl getInstance(){
+    synchronized public static ArchiveBuilderImpl getInstance(){
 
         if(instance == null){
 
