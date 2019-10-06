@@ -18,8 +18,8 @@ public class ArchiveManagerImpl implements ArchiveManager {
     }
 
     @Override
-    public ArrayList<Portfolio> getListFiles(Filter filter) {
-        return dao.getListFiles(filter);
+    public ArrayList<Portfolio> getListPortfolios() {
+        return dao.getListPortfolios();
     }
 
     @Override
@@ -39,5 +39,11 @@ public class ArchiveManagerImpl implements ArchiveManager {
                                      double averageScore) {
 
         return dao.createPortfolio(name, lastName, numOfGroup, department, averageScore);
+    }
+
+    @Override
+    public void searchCertainPortfolio(ArrayList<Portfolio> portfolios, Filter filter) {
+
+        dao.searchCertainPortfolio(portfolios, filter);
     }
 }

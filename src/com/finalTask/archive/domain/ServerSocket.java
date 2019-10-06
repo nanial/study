@@ -14,6 +14,7 @@ import com.finalTask.archive.apiDao.ArchiveDao;
 import com.finalTask.archive.business.ArchiveBuilderFactory;
 import com.finalTask.archive.business.ArchiveManagerImpl;
 import com.finalTask.archive.dao.ArchiveDaoImpl;
+
 import java.net.*;
 import java.io.*;
 import java.util.ArrayList;
@@ -28,16 +29,16 @@ public class ServerSocket {
         ArchiveManager am = new ArchiveManagerImpl(archD);
 
         am.writeInFilePortfolio(arch.base());
-        ArrayList<Portfolio>portfolios = new ArrayList<>();
+
 
         while (true) {
 
-            try (java.net.ServerSocket serverSocket = new java.net.ServerSocket(8080)){
+            try (java.net.ServerSocket serverSocket = new java.net.ServerSocket(8080)) {
 
                 Socket clientSocket = serverSocket.accept();
 
                 BufferedWriter writer =
-                       new BufferedWriter( new OutputStreamWriter(clientSocket.getOutputStream()));
+                        new BufferedWriter(new OutputStreamWriter(clientSocket.getOutputStream()));
 
                 writer.write("HTTP/1.0 200 OK");
                 writer.newLine();
@@ -49,29 +50,27 @@ public class ServerSocket {
                 ObjectInputStream ois =
                         new ObjectInputStream(clientSocket.getInputStream());
 
-                for (Portfolio p : am.getListFiles(null)) {
 
-                    oos.writeObject(p);
+                oos.writeObject(am.getListPortfolios());
+
+
+                ArrayList<Portfolio> portfolios = new ArrayList<>();
+
+                try {
+                    portfolios.addAll((ArrayList<Portfolio>) ois.readObject());
+
+                } catch (ClassNotFoundException cnf) {
+
+                    cnf.getMessage();
                 }
 
-                writer.flush();
+                for (Portfolio p : portfolios) {
 
-
-
-             /*   while (ois != null) {
-
-                    try {
-                        portfolios.add((Portfolio) ois.readObject());
-                    } catch (ClassNotFoundException cnf) {
-                        cnf.getMessage();
-                    }
+                    System.out.println(p.toString());
                 }
 
-                am.writeInFilePortfolio(portfolios);*/
-                writer.flush();
+                am.writeInFilePortfolio(portfolios);
 
-                //ois.close();
-                writer.close();
                 clientSocket.close();
 
             } catch (IOException io) {

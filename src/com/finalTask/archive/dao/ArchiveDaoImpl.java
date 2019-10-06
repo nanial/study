@@ -12,7 +12,7 @@ import java.util.ArrayList;
 public class ArchiveDaoImpl implements ArchiveDao {
 
     @Override
-    public ArrayList<Portfolio> getListFiles(Filter filter) {
+    public ArrayList<Portfolio> getListPortfolios() {
 
         ArrayList<Portfolio> portfolios = new ArrayList<>();
 
@@ -21,6 +21,7 @@ public class ArchiveDaoImpl implements ArchiveDao {
                     ("D:\\study\\java\\study\\src\\com\\finalTask\\archive\\archive.html")));
 
             portfolios = (ArrayList<Portfolio>) decoder.readObject();
+
 
         } catch (IOException io) {
 
@@ -66,7 +67,67 @@ public class ArchiveDaoImpl implements ArchiveDao {
     @Override
     public Portfolio createPortfolio(String name, String lastName, int numOfGroup, String department,
                                      double averageScore) {
+
         return new Portfolio(name, lastName, numOfGroup, department, averageScore);
+    }
+
+    @Override
+    public void searchCertainPortfolio(ArrayList<Portfolio> portfolios, Filter filter) {
+
+        if (filter != null){
+
+            if(filter.getLastName() != null) {
+
+                for (Portfolio p : portfolios) {
+
+                    if (p.getLastName().equals(filter.getLastName())) {
+
+                        System.out.println(p.toString());
+                    }
+                }
+            }
+            if(filter.getName() != null) {
+
+                for (Portfolio p : portfolios) {
+
+                    if (p.getName().equals(filter.getName())) {
+
+                        System.out.println(p.toString());
+                    }
+                }
+            }
+            if(filter.getDepartment() != null) {
+
+                for (Portfolio p : portfolios) {
+
+                    if (p.getDepartment().equals(filter.getDepartment())) {
+
+                        System.out.println(p.toString());
+                    }
+                }
+            }
+            if(filter.getNumOfGroup() != 0) {
+
+                for (Portfolio p : portfolios) {
+
+                    if (p.getNumOfGroup() == filter.getNumOfGroup()) {
+
+                        System.out.println(p.toString());
+                    }
+                }
+            }
+            if(filter.getIdOfStudent() != 0) {
+
+                for (Portfolio p : portfolios) {
+
+                    if (p.getIdOfStudent() == filter.getIdOfStudent()) {
+
+                        System.out.println(p.toString());
+                    }
+                }
+            }
+
+        }
     }
 
 }

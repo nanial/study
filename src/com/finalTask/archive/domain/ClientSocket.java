@@ -4,6 +4,7 @@ import com.finalTask.archive.apiBusiness.ArchiveManager;
 import com.finalTask.archive.apiDao.ArchiveDao;
 import com.finalTask.archive.business.ArchiveManagerImpl;
 import com.finalTask.archive.dao.ArchiveDaoImpl;
+import com.finalTask.archive.filter.Filter;
 
 import java.io.*;
 import java.net.*;
@@ -14,7 +15,7 @@ public class ClientSocket {
 
     static ArrayList<Customer> customers = new Customers().fillListOfCustomer();
 
-    public static void userService(){
+    public static void userService() {
 
     }
 
@@ -24,7 +25,7 @@ public class ClientSocket {
         ArchiveDao archD = new ArchiveDaoImpl();
         ArchiveManager am = new ArchiveManagerImpl(archD);
 
-        try (@SuppressWarnings("")
+      /*  try (@SuppressWarnings("")
              Scanner scan = new Scanner(System.in)) {
 
             System.out.println("Enter for admin");
@@ -34,21 +35,23 @@ public class ClientSocket {
 
                 if (c.getPosition().equals(position)) {
 
-                    if (c.getRole() == Role.ADMIN) {
+                    if (c.getRole() == Role.ADMIN) {*/
 
-                        //scanner with switch
+        //scanner with switch
 
-                        am.updatePortfolio(portfolios,
-                                1, "Geography",//for example
-                                45, 9.5);
+        am.updatePortfolio(portfolios,
+                1, "Geography",//for example
+                45, 9.5);
 
-                        Portfolio portfolio = am.createPortfolio("Fiodor",
-                                "Mikhoylov", 62,
-                                "Archaeology", 2.6);
-                        portfolio.setIdOfStudent(portfolios.size() + 1);
-                        portfolios.add(portfolio);
-                        //end switch
-                        for (Portfolio p : portfolios) {
+        Portfolio portfolio = am.createPortfolio("Fiodor",
+                "Mikhoylov", 62,
+                "Archaeology", 2.6);
+        portfolio.setIdOfStudent(portfolios.size() + 1);
+        portfolios.add(portfolio);
+
+        am.searchCertainPortfolio(portfolios, new Filter(0, "Geography"));
+        //end switch
+                       /* for (Portfolio p : portfolios) {
 
                             System.out.println(p.toString());
                         }
@@ -58,7 +61,7 @@ public class ClientSocket {
 
             }
 
-        }
+        }*/
         return portfolios;
     }
 
@@ -76,23 +79,40 @@ public class ClientSocket {
             ObjectOutputStream oos =
                     new ObjectOutputStream(clientSocket.getOutputStream());
 
-            while (ois != null) {
 
-                try {
-                    portfolios.add((Portfolio) ois.readObject());
-                } catch (ClassNotFoundException cnf) {
+            try {
+                    portfolios.addAll((ArrayList<Portfolio>) ois.readObject());
+
+            } catch (ClassNotFoundException cnf) {
+
                     cnf.getMessage();
-                }
             }
 
+
+            for (Portfolio p : portfolios) {
+
+                System.out.println(p.toString());
+            }
+            System.out.println("///////////////////////////");
+
+            adminPanel(portfolios);
+
+            System.out.println("//////////////////////");
+
+            for (Portfolio p : portfolios) {
+
+                System.out.println(p.toString());
+            }
+
+            portfolios = adminPanel(portfolios);
+
+
+            oos.writeObject(portfolios);
+
         } catch (IOException io) {
+
             io.getMessage();
         }
 
-        for (Portfolio p : portfolios) {
-            System.out.println(p.toString());
-        }
-
-        adminPanel(portfolios);
     }
 }
