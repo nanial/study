@@ -5,9 +5,10 @@ import java.util.ArrayList;
 public class Port {
 
     private long capacity;
-    private final int numOfDocks = 8;
     private boolean hasAvailableDock;
     private int currentNumOfBox;
+    private ArrayList<Ship> ships = new ArrayList<>();
+    private Dock[] docks = new Dock[8];
 
     public Port() {
     }
@@ -18,8 +19,20 @@ public class Port {
         this.currentNumOfBox = currentNumOfBox;
     }
 
-    public int getNumOfDocks() {
-        return numOfDocks;
+    public Dock[] getDocks() {
+        return docks;
+    }
+
+    public void setDocks(Dock[] docks) {
+        this.docks = docks;
+    }
+
+    public ArrayList<Ship> getShips() {
+        return ships;
+    }
+
+    public void setShips(ArrayList<Ship> ships) {
+        this.ships = ships;
     }
 
     public int getCurrentNumOfBox() {

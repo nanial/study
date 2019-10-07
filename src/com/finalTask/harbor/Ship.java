@@ -42,16 +42,18 @@ public class Ship extends Thread {
 
         if(port.isHasAvailableDock() == true) {
 
-            numberOfBox++;
+            System.out.println("on board of " + this.getName() + " remain " + numberOfBox++ + " boxes");
             port.setCurrentNumOfBox(port.getCurrentNumOfBox() - 1);
+            System.out.println("after loading in port remain " + port.getCurrentNumOfBox() + " boxes");
         }
     }
     private void unloading(){
 
         if(port.isHasAvailableDock() == true) {
 
-            numberOfBox--;
+            System.out.println("on board of ship " + this.getName() + " remain " + numberOfBox-- + " boxes");
             port.setCurrentNumOfBox(port.getCurrentNumOfBox() + 1);
+            System.out.println("after unloading in port remain " + port.getCurrentNumOfBox() + " boxes");
 
         }
     }
