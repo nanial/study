@@ -1,21 +1,20 @@
 package com.finalTask.harbor;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class Dock {
 
-    private int numberOfDock;
+    private static final AtomicInteger count = new AtomicInteger(0);
+    private int idOfDock;
     private boolean isAvailable;
 
-    public Dock(int numberOfDock, boolean isAvailable) {
-        this.numberOfDock = numberOfDock;
-        this.isAvailable = isAvailable;
+    public Dock() {
+
+        this.idOfDock = count.incrementAndGet();
+        this.isAvailable = true;
     }
 
-    public int getNumberOfDock() {
-        return numberOfDock;
-    }
-
-    public void setNumberOfDock(int numberOfDock) {
-        this.numberOfDock = numberOfDock;
+    public int getIdOfDock() {
+        return idOfDock;
     }
 
     public boolean isAvailable() {

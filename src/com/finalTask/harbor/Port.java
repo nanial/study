@@ -1,30 +1,30 @@
 package com.finalTask.harbor;
 
+
 import java.util.ArrayList;
 
 public class Port {
 
     private long capacity;
-    private boolean hasAvailableDock;
     private int currentNumOfBox;
     private ArrayList<Ship> ships = new ArrayList<>();
-    private Dock[] docks = new Dock[8];
+    private int numOfdocks;
 
     public Port() {
     }
 
-    public Port(long capacity, boolean hasAvailableDock, int currentNumOfBox) {
+    public Port(long capacity, int currentNumOfBox, int numOfdocks) {
         this.capacity = capacity;
-        this.hasAvailableDock = hasAvailableDock;
         this.currentNumOfBox = currentNumOfBox;
+        this.numOfdocks = numOfdocks;
     }
 
-    public Dock[] getDocks() {
-        return docks;
+    public int getNumOfdocks() {
+        return numOfdocks;
     }
 
-    public void setDocks(Dock[] docks) {
-        this.docks = docks;
+    public void setNumOfdocks(int numOfdocks) {
+        this.numOfdocks = numOfdocks;
     }
 
     public ArrayList<Ship> getShips() {
@@ -49,16 +49,5 @@ public class Port {
 
     public void setCapacity(long capacity) {
         this.capacity = capacity;
-    }
-
-
-
-    public boolean isHasAvailableDock() {
-
-        return hasAvailableDock;
-    }
-
-    public void setHasAvailableDock(boolean hasAvailableDock) {
-        this.hasAvailableDock = hasAvailableDock;
     }
 }
