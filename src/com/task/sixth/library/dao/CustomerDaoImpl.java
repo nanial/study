@@ -15,7 +15,7 @@ public class CustomerDaoImpl implements CustomerDao {
         ArrayList<Customer> customers = new ArrayList<>();
         try {
             XMLDecoder decoder = new XMLDecoder(new BufferedInputStream(new FileInputStream
-                    ("D:\\study\\java\\study\\src\\com\\finalTask\\library\\customers.txt")));
+                    ("D:\\study\\java\\study\\src\\com\\task\\sixth\\library\\customers.txt")));
 
             customers = (ArrayList<Customer>) decoder.readObject();
 
@@ -31,7 +31,7 @@ public class CustomerDaoImpl implements CustomerDao {
         XMLEncoder encoder = null;
         try {
             encoder = new XMLEncoder(new BufferedOutputStream(new FileOutputStream
-                    ("D:\\study\\java\\study\\src\\com\\finalTask\\library\\customers.txt")));
+                    ("D:\\study\\java\\study\\src\\com\\task\\sixth\\library\\customers.txt")));
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }

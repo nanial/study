@@ -21,10 +21,14 @@ public class ArraysSortTwo {
                 int k = 0;
 
                 while (i < a.length && j < b.length) {
+
                     if (a[i] < b[j]) {
+
                         resArr[k] = a[i];
                         i++;
-                    } else {
+                    }
+                    else {
+
                         resArr[k] = b[j];
                         j++;
                     }
@@ -32,12 +36,14 @@ public class ArraysSortTwo {
                 }
 
                 while (i < a.length) {
+
                     resArr[k] = a[i];
                     i++;
                     k++;
                 }
 
                 while (j < b.length){
+
                     resArr[k] = b[j];
                     j++;
                     k++;

@@ -106,5 +106,26 @@
     </void>
    </object>
   </void>
+  <void method="add">
+   <object class="com.task.sixth.noteBook.domain.Note">
+    <void property="dateOfEdit">
+     <object class="java.time.LocalDate" method="parse">
+      <string>2019-10-20</string>
+     </object>
+    </void>
+    <void property="email">
+     <string>nanial@mail.ru</string>
+    </void>
+    <void property="message">
+     <string>lear more</string>
+    </void>
+    <void property="noteId">
+     <int>6</int>
+    </void>
+    <void property="theme">
+     <string>final test</string>
+    </void>
+   </object>
+  </void>
  </object>
 </java>

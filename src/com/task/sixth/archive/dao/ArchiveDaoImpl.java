@@ -18,7 +18,7 @@ public class ArchiveDaoImpl implements ArchiveDao {
 
         try {
             XMLDecoder decoder = new XMLDecoder(new BufferedInputStream(new FileInputStream
-                    ("D:\\study\\java\\study\\src\\com\\finalTask\\archive\\archive.html")));
+                    ("D:\\study\\java\\study\\src\\com\\task\\sixth\\archive\\archive.html")));
 
             portfolios = (ArrayList<Portfolio>) decoder.readObject();
 
@@ -37,7 +37,7 @@ public class ArchiveDaoImpl implements ArchiveDao {
         XMLEncoder encoder = null;
         try {
             encoder = new XMLEncoder(new BufferedOutputStream(new FileOutputStream
-                    ("D:\\study\\java\\study\\src\\com\\finalTask\\archive\\archive.html")));
+                    ("D:\\study\\java\\study\\src\\com\\task\\sixth\\archive\\archive.html")));
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();

@@ -21,7 +21,7 @@ public class BookDaoImpl implements BookDao{
 
         try {
             XMLDecoder decoder = new XMLDecoder(new BufferedInputStream(new FileInputStream
-                    ("D:\\study\\java\\study\\src\\com\\finalTask\\library\\catalog.txt")));
+                    ("D:\\study\\java\\study\\src\\com\\task\\sixth\\library\\catalog.txt")));
 
             books = (ArrayList<Book>) decoder.readObject();
 
@@ -72,7 +72,7 @@ public class BookDaoImpl implements BookDao{
         XMLEncoder encoder = null;
         try {
             encoder = new XMLEncoder(new BufferedOutputStream(new FileOutputStream
-                    ("D:\\study\\java\\study\\src\\com\\finalTask\\library\\catalog.txt")));
+                    ("D:\\study\\java\\study\\src\\com\\task\\sixth\\library\\catalog.txt")));
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }

@@ -21,7 +21,7 @@ public class NotebookDaoImpl implements NotebookDao {
 
         try {
             XMLDecoder decoder = new XMLDecoder(new BufferedInputStream(new FileInputStream
-                    ("D:\\study\\java\\study\\src\\com\\finalTask\\noteBook\\notes.txt")));
+                    ("D:\\study\\java\\study\\src\\com\\task\\sixth\\noteBook\\notes.txt")));
 
             notes = (ArrayList<Note>) decoder.readObject();
 
@@ -93,7 +93,7 @@ public class NotebookDaoImpl implements NotebookDao {
         XMLEncoder encoder = null;
         try {
             encoder = new XMLEncoder(new BufferedOutputStream(new FileOutputStream
-                    ("D:\\study\\java\\study\\src\\com\\finalTask\\noteBook\\notes.txt")));
+                    ("D:\\study\\java\\study\\src\\com\\task\\sixth\\noteBook\\notes.txt")));
 
             encoder.setPersistenceDelegate(LocalDate.class, new PersistenceDelegate() {
 

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Port {
 
-    private long capacity;
+    private int capacity;
     private int currentNumOfBox;
     private ArrayList<Ship> ships = new ArrayList<>();
     private int numOfDocks;
@@ -12,7 +12,7 @@ public class Port {
     public Port() {
     }
 
-    public Port(long capacity, int currentNumOfBox, int numOfdocks) {
+    public Port(int capacity, int currentNumOfBox, int numOfdocks) {
         this.capacity = capacity;
         this.currentNumOfBox = currentNumOfBox;
         this.numOfDocks = numOfdocks;
@@ -42,11 +42,11 @@ public class Port {
         this.currentNumOfBox = currentNumOfBox;
     }
 
-    public long getCapacity() {
+    public int getCapacity() {
         return capacity;
     }
 
-    public void setCapacity(long capacity) {
+    public void setCapacity(int capacity) {
         this.capacity = capacity;
     }
 }

@@ -12,30 +12,37 @@ import java.util.Arrays;
 public class ArraysSortFive {
 
     public static void main(String[] args) {
+
         System.out.println(Arrays.toString
                 (insertsSort(new int[]{-220,-115, -115, -99, -15, 166, 174, 182, 232, 820}, -5)));
 
     }
 
     private static int[] insertsSort(int[] arr, int insertElement) {
+
         int tempInsert = insertElement;
 
         int[] arrWithInsert = new int[arr.length + 1];
 
                while (binarySearch(arr, insertElement) == -1){
+                   
                    insertElement--;
                }
 
                int temp = binarySearch(arr, insertElement);
 
                 for (int j = 0; j < arrWithInsert.length; j++) {
+
                     if (j <= temp) {
+
                         arrWithInsert[j] = arr[j];
                     }
                     else if (j > temp + 1){
+
                         arrWithInsert[j] = arr[j - 1];
                     }
                     else {
+
                         arrWithInsert[temp + 1] = tempInsert;
                     }
                 }
@@ -49,16 +56,22 @@ public class ArraysSortFive {
         int end = arr.length - 1;
 
         while (begin <= end) {
+
             int middle = begin + (end - begin) / 2;
 
-            if (arr[middle] < value)
+            if (arr[middle] < value){
+
                 begin = middle + 1;
+            }
 
-            else if (arr[middle] > value)
+            else if (arr[middle] > value) {
+
                 end = middle - 1;
+            }
+            else {
 
-            else
                 return middle;
+            }
         }
         return -1;
     }
