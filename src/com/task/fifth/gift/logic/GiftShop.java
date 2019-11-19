@@ -1,5 +1,9 @@
-package com.task.fifth.gift.bean;
+package com.task.fifth.gift.logic;
 
+import com.task.fifth.gift.bean.*;
+import com.task.fifth.gift.bean.abstraction.AbstractPack;
+import com.task.fifth.gift.bean.abstraction.AbstractShop;
+import com.task.fifth.gift.bean.abstraction.AbstractSweet;
 import com.task.fifth.gift.bean.classification.TypeOfPack;
 import com.task.fifth.gift.bean.classification.TypeOfSweet;
 

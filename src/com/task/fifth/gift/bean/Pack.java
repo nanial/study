@@ -1,5 +1,7 @@
 package com.task.fifth.gift.bean;
 
+import com.task.fifth.gift.bean.abstraction.AbstractPack;
+import com.task.fifth.gift.bean.abstraction.AbstractSweet;
 import com.task.fifth.gift.bean.classification.TypeOfPack;
 
 public class Pack extends AbstractPack {

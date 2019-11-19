@@ -10,8 +10,8 @@ package com.task.fifth.gift.runner;
 //Вариант B. Подарки. Реализовать приложение, позволяющее создавать подарки
 // (объект, представляющий собой подарок). Составляющими целого подарка являются сладости и упаковка.
 
-import com.task.fifth.gift.bean.Client;
-import com.task.fifth.gift.bean.GiftShop;
+import com.task.fifth.gift.logic.Client;
+import com.task.fifth.gift.logic.GiftShop;
 
 public class Main {
     public static void main(String[] args) {

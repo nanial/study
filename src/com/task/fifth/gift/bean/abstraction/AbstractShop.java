@@ -1,6 +1,6 @@
-package com.task.fifth.gift.bean;
+package com.task.fifth.gift.bean.abstraction;
 
-abstract class AbstractShop {
+public abstract class AbstractShop {
 
     public abstract AbstractSweet preferSweet();
     public abstract AbstractPack preferPack();

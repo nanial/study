@@ -1,5 +1,6 @@
 package com.task.fifth.gift.bean;
 
+import com.task.fifth.gift.bean.abstraction.AbstractSweet;
 import com.task.fifth.gift.bean.classification.TypeOfSweet;
 
 public class Sweet extends AbstractSweet {

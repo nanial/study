@@ -1,4 +1,8 @@
-package com.task.fifth.gift.bean;
+package com.task.fifth.gift.logic;
+
+import com.task.fifth.gift.bean.abstraction.AbstractPack;
+import com.task.fifth.gift.bean.abstraction.AbstractShop;
+import com.task.fifth.gift.bean.abstraction.AbstractSweet;
 
 public class Client {
 
