@@ -2,7 +2,7 @@ package com.task.first.linear;
 
 import java.util.Scanner;
 
-//print true if point(x,y) belongs certain aria
+//print true if point(x,y) belongs certain area
 // (x >= -2 && x <= 2) && (y >= 0 && y <= 4) ||
 // (x >= -4 && x <= 4) && (y >= -3 && y <= 0)
 

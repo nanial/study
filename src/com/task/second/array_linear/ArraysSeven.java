@@ -13,10 +13,12 @@ class ArrasSeven {
         double [] halfArr = new double [n]; // result array
 
         for (int i = 0; i < arr.length; i++){
+
             arr[i] = Math.random() * 100 - 50;
         }
 
         for (int i = 0; i < halfArr.length; i++){
+
             halfArr[i] = arr[i] + arr[arr.length - 1 - i]; // according to the conditions of task
         }
 

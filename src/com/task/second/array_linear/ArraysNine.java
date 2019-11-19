@@ -3,7 +3,6 @@ package com.task.second.array_linear;
 // наиболее часто встречающееся число. Если таких
 //чисел несколько, то определить наименьшее из них.
 
-import java.util.Arrays;
 
 class ArraysNine {
 

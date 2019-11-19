@@ -5,6 +5,7 @@ package com.task.second.array_linear;
 //положительных и нулевых элементов.
 
 public class ArraysThree {
+
     public static void main(String[] args) {
 
         final int N = 50;//for example
@@ -18,9 +19,11 @@ public class ArraysThree {
             a[i] = Math.random() * 100 - 50;
 
             if(a[i] > 0){
+
                 counterOfPositive++;
             }
             else if (a[i] < 0){
+
                 counterOfNegative++;
             }
         }

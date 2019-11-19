@@ -7,15 +7,20 @@ package com.task.second.array_linear;
 import java.util.Random;
 
 public class ArraysOne {
+
     public static void main(String[] args) {
+
         final int N = 100;//for example because final
         final int K = 6;// ---------//---//----------
         long sum = 0;
         int [] A = new int[N];
 
         for (int i = 0; i < N; i++){
+
             A[i] = Math.abs(new Random().nextInt(65536)-32768);
+
             if((A[i] % K) == 0){
+
                 sum += A[i];
             }
         }

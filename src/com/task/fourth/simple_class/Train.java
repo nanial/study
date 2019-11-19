@@ -29,27 +29,6 @@ public class Train {
         return dateFormat.format(date);
     }
 
-    public static void main(String[] args) {
-
-        Train[] station = new Train[]{
-                new Train("Lvov", 145, new Date(366000)),
-                new Train("Lvov", 149, new Date(126619000)),
-                new Train("Polotsk", 126, new Date(876542012)),
-                new Train("Warsavia", 178, new Date(494794000)),
-                new Train("Moscow", 25, new Date(46164000)),
-                new Train("Kyev", 78, new Date(401494000)),
-                new Train("Polotsk", 121, new Date(954287201)),
-                new Train("Minsk", 26, new Date(6542000)),
-                new Train("MinVody", 12, new Date(87651110)),
-        };
-
-        print(sortOfNumOfTrain(station));
-        getCustomInfo(station);
-        System.out.println();
-        print(sortOfDestination(station));
-
-    }
-
     private static Train[] sortOfNumOfTrain(Train[] station) {
 
         for (int i = 1; i < station.length; i++) {
@@ -70,7 +49,6 @@ public class Train {
         return station;
     }
 
-
     private static Train[] sortOfDestination(Train[] station) {
 
         for (int i = 1; i < station.length; i++) {
@@ -80,7 +58,8 @@ public class Train {
                 if (station[i - 1].destination.charAt(j) <
                         station[i].destination.charAt(j)) {
                     break;
-                } else if (station[i - 1].destination.equals(station[i].destination)) {
+                }
+                else if (station[i - 1].destination.equals(station[i].destination)) {
 
                     if (station[0].departure.getTime() >
                             station[i].departure.getTime()) {
@@ -89,7 +68,8 @@ public class Train {
                         station[i] = station[i - 1];
                         station[i - 1] = temp;
                     }
-                } else if (station[i - 1].destination.charAt(j) >
+                }
+                else if (station[i - 1].destination.charAt(j) >
                         station[i].destination.charAt(j)) {
 
                     Train temp = station[i];
@@ -142,4 +122,24 @@ public class Train {
         }
     }
 
+    public static void main(String[] args) {
+
+        Train[] station = new Train[]{
+                new Train("Lvov", 145, new Date(366000)),
+                new Train("Lvov", 149, new Date(126619000)),
+                new Train("Polotsk", 126, new Date(876542012)),
+                new Train("Warsavia", 178, new Date(494794000)),
+                new Train("Moscow", 25, new Date(46164000)),
+                new Train("Kyev", 78, new Date(401494000)),
+                new Train("Polotsk", 121, new Date(954287201)),
+                new Train("Minsk", 26, new Date(6542000)),
+                new Train("MinVody", 12, new Date(87651110)),
+        };
+
+        print(sortOfNumOfTrain(station));
+        getCustomInfo(station);
+        System.out.println();
+        print(sortOfDestination(station));
+
+    }
 }
