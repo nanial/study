@@ -25,4 +25,31 @@ public class Customer {
     public void setRole(Role role) {
         this.role = role;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Customer)) return false;
+
+        Customer customer = (Customer) o;
+
+        if (getPosition() != null ? !getPosition().equals(customer.getPosition()) : customer.getPosition() != null)
+            return false;
+        return getRole() == customer.getRole();
+    }
+
+    @Override
+    public int hashCode() {
+        int result = getPosition() != null ? getPosition().hashCode() : 0;
+        result = 31 * result + (getRole() != null ? getRole().hashCode() : 0);
+        return result;
+    }
+
+    @Override
+    public String toString() {
+        return "Customer{" +
+                "position='" + position + '\'' +
+                ", role=" + role +
+                '}';
+    }
 }

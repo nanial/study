@@ -1,23 +1,23 @@
 package com.task.fifth.dragon.bean;
 
-import com.task.fifth.dragon.logic.Grotto;
+import com.task.fifth.dragon.logic.impl.GrottoUtilsImpl;
 
 import java.util.Arrays;
 
 public class Dragon {
 
-    Grotto grotto = new Grotto();
-    Treasure[] treasures = grotto.fillingCollect();
+    GrottoUtilsImpl grottoUtilsImpl = new GrottoUtilsImpl();
+    Treasure[] treasures = grottoUtilsImpl.fillingCollect();
 
     public Dragon() {
     }
 
-    public Grotto getGrotto() {
-        return grotto;
+    public GrottoUtilsImpl getGrottoUtilsImpl() {
+        return grottoUtilsImpl;
     }
 
-    public void setGrotto(Grotto grotto) {
-        this.grotto = grotto;
+    public void setGrottoUtilsImpl(GrottoUtilsImpl grottoUtilsImpl) {
+        this.grottoUtilsImpl = grottoUtilsImpl;
     }
 
     public Treasure[] getTreasures() {
@@ -35,14 +35,14 @@ public class Dragon {
 
         Dragon dragon = (Dragon) o;
 
-        if (getGrotto() != null ? !getGrotto().equals(dragon.getGrotto()) : dragon.getGrotto() != null) return false;
+        if (getGrottoUtilsImpl() != null ? !getGrottoUtilsImpl().equals(dragon.getGrottoUtilsImpl()) : dragon.getGrottoUtilsImpl() != null) return false;
         // Probably incorrect - comparing Object[] arrays with Arrays.equals
         return Arrays.equals(getTreasures(), dragon.getTreasures());
     }
 
     @Override
     public int hashCode() {
-        int result = getGrotto() != null ? getGrotto().hashCode() : 0;
+        int result = getGrottoUtilsImpl() != null ? getGrottoUtilsImpl().hashCode() : 0;
         result = 31 * result + Arrays.hashCode(getTreasures());
         return result;
     }
@@ -50,7 +50,7 @@ public class Dragon {
     @Override
     public String toString() {
         return "Dragon{" +
-                "grotto=" + grotto +
+                "grotto=" + grottoUtilsImpl +
                 ", treasures=" + Arrays.toString(treasures) +
                 '}';
     }

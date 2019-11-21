@@ -1,6 +1,7 @@
-package com.task.fifth.calendar.logic;
+package com.task.fifth.calendar.logic.impl;
 
 import com.task.fifth.calendar.bean.MyCalendar;
+import com.task.fifth.calendar.logic.api.MyCalendarUtils;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -11,7 +12,7 @@ import java.util.Date;
 import java.util.SortedSet;
 import java.util.TreeSet;
 
-public class MyCalendarUtilsImpl implements MyCalendarUtils{
+public class MyCalendarUtilsImpl implements MyCalendarUtils {
 
     private MyCalendar myCalendar;
     private MyCalendar.TransientHolidays transientHolidays;

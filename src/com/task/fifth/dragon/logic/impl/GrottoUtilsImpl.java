@@ -1,11 +1,12 @@
-package com.task.fifth.dragon.logic;
+package com.task.fifth.dragon.logic.impl;
 
 import com.task.fifth.dragon.bean.Treasure;
 import com.task.fifth.dragon.bean.TypeOfTreasure;
+import com.task.fifth.dragon.logic.api.GrottoUtils;
 
 import java.util.Random;
 
-public class Grotto {
+public class GrottoUtilsImpl implements GrottoUtils {
 
     private Treasure[] collectionOfTreasure = new Treasure[100];
 

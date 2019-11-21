@@ -1,7 +1,8 @@
-package com.task.fifth.dragon.logic;
+package com.task.fifth.dragon.logic.impl;
 
 import com.task.fifth.dragon.bean.Dragon;
 import com.task.fifth.dragon.bean.Treasure;
+import com.task.fifth.dragon.logic.api.DragonUtils;
 
 import java.util.ArrayList;
 import java.util.Arrays;

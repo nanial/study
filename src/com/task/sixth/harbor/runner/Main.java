@@ -1,4 +1,4 @@
-package com.task.sixth.harbor;
+package com.task.sixth.harbor.runner;
 
 //Многопоточность. Порт . Корабли заходят в порт для разгрузки/загрузки контейнеров.+
 // Число контейнеров, находящихся в текущий момент в порту и на корабле,
@@ -6,6 +6,11 @@ package com.task.sixth.harbor;
 // В порту работает несколько причалов.+ У одного причала может стоять один корабль.+
 // Корабль может загружаться у причала или разгружаться.+
 
+
+import com.task.sixth.harbor.bean.Port;
+import com.task.sixth.harbor.bean.Ship;
+import com.task.sixth.harbor.logic.api.ShipUtils;
+import com.task.sixth.harbor.logic.api.ShipUtilsImpl;
 
 public class Main {
 

@@ -13,8 +13,8 @@ package com.task.fifth.dragon.runner;
 //выбора сокровищ на заданную сумму.
 
 import com.task.fifth.dragon.bean.Dragon;
-import com.task.fifth.dragon.logic.DragonUtils;
-import com.task.fifth.dragon.logic.DragonUtilsImpl;
+import com.task.fifth.dragon.logic.api.DragonUtils;
+import com.task.fifth.dragon.logic.impl.DragonUtilsImpl;
 
 public class Main {
 

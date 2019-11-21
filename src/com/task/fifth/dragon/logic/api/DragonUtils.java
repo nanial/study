@@ -1,4 +1,4 @@
-package com.task.fifth.dragon.logic;
+package com.task.fifth.dragon.logic.api;
 
 import com.task.fifth.dragon.bean.Treasure;
 

@@ -4,8 +4,8 @@ package com.task.fifth.calendar.runner;
 // можно хранить информацию о выходных и праздничных днях.
 
 import com.task.fifth.calendar.bean.MyCalendar;
-import com.task.fifth.calendar.logic.MyCalendarUtils;
-import com.task.fifth.calendar.logic.MyCalendarUtilsImpl;
+import com.task.fifth.calendar.logic.api.MyCalendarUtils;
+import com.task.fifth.calendar.logic.impl.MyCalendarUtilsImpl;
 
 public class Main {
 

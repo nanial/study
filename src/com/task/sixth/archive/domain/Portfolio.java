@@ -75,6 +75,36 @@ public class Portfolio implements Serializable {
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Portfolio)) return false;
+
+        Portfolio portfolio = (Portfolio) o;
+
+        if (getIdOfStudent() != portfolio.getIdOfStudent()) return false;
+        if (getNumOfGroup() != portfolio.getNumOfGroup()) return false;
+        if (Double.compare(portfolio.getAverageScore(), getAverageScore()) != 0) return false;
+        if (getName() != null ? !getName().equals(portfolio.getName()) : portfolio.getName() != null) return false;
+        if (getLastName() != null ? !getLastName().equals(portfolio.getLastName()) : portfolio.getLastName() != null)
+            return false;
+        return getDepartment() != null ? getDepartment().equals(portfolio.getDepartment()) : portfolio.getDepartment() == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result;
+        long temp;
+        result = getIdOfStudent();
+        result = 31 * result + (getName() != null ? getName().hashCode() : 0);
+        result = 31 * result + (getLastName() != null ? getLastName().hashCode() : 0);
+        result = 31 * result + getNumOfGroup();
+        result = 31 * result + (getDepartment() != null ? getDepartment().hashCode() : 0);
+        temp = Double.doubleToLongBits(getAverageScore());
+        result = 31 * result + (int) (temp ^ (temp >>> 32));
+        return result;
+    }
+
+    @Override
     public String toString() {
         return "Portfolio{" +
                 "idOfStudent=" + idOfStudent +

@@ -1,4 +1,7 @@
-package com.task.sixth.harbor;
+package com.task.sixth.harbor.bean;
+
+import com.task.sixth.harbor.logic.api.ShipUtils;
+import com.task.sixth.harbor.logic.api.ShipUtilsImpl;
 
 public class Ship extends Thread {
 
@@ -7,6 +10,7 @@ public class Ship extends Thread {
     private int boxToUnload;
     private int boxToLoad;
     private Port port;
+    private ShipUtils shipUtils;
 
     public Ship(String name, int carrying, int currentNumberOfBox,
                 int boxToUnload, int boxToLoad, Port port) {
@@ -17,6 +21,16 @@ public class Ship extends Thread {
         this.boxToUnload = boxToUnload;
         this.boxToLoad = boxToLoad;
         this.port = port;
+    }
+
+    public Ship(int carrying, int currentNumberOfBox, int boxToUnload,
+                int boxToLoad, Port port) {
+        this.carrying = carrying;
+        this.currentNumberOfBox = currentNumberOfBox;
+        this.boxToUnload = boxToUnload;
+        this.boxToLoad = boxToLoad;
+        this.port = port;
+        this.shipUtils = new ShipUtilsImpl();
     }
 
     public int getCarrying() {
