@@ -11,6 +11,8 @@ package com.task.sixth.archive.domain;
 
 import com.task.sixth.archive.apiBusiness.ArchiveManager;
 import com.task.sixth.archive.apiDao.ArchiveDao;
+import com.task.sixth.archive.bean.Archive;
+import com.task.sixth.archive.bean.Portfolio;
 import com.task.sixth.archive.business.ArchiveBuilderFactory;
 import com.task.sixth.archive.business.ArchiveManagerImpl;
 import com.task.sixth.archive.dao.ArchiveDaoImpl;
@@ -19,7 +21,7 @@ import java.net.*;
 import java.io.*;
 import java.util.ArrayList;
 
-public class ServerSocket {
+public class  ServerSocket {
 
 
     public static void main(String[] args) {

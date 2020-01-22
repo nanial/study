@@ -1,4 +1,6 @@
-package com.task.sixth.archive.domain;
+package com.task.sixth.archive.bean;
+
+import com.task.sixth.archive.bean.Portfolio;
 
 import java.util.ArrayList;
 

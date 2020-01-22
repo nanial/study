@@ -1,5 +1,8 @@
 package com.task.sixth.archive.domain;
 
+import com.task.sixth.archive.bean.Portfolio;
+import com.task.sixth.archive.view.Menu;
+
 import java.io.*;
 import java.net.*;
 import java.util.ArrayList;

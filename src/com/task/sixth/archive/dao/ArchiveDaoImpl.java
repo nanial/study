@@ -1,7 +1,7 @@
 package com.task.sixth.archive.dao;
 
 import com.task.sixth.archive.apiDao.ArchiveDao;
-import com.task.sixth.archive.domain.Portfolio;
+import com.task.sixth.archive.bean.Portfolio;
 import com.task.sixth.archive.filter.Filter;
 import java.beans.XMLDecoder;
 import java.beans.XMLEncoder;

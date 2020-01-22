@@ -1,7 +1,7 @@
 package com.task.sixth.archive.business;
 
 import com.task.sixth.archive.apiBusiness.ArchiveBuilder;
-import com.task.sixth.archive.domain.Archive;
+import com.task.sixth.archive.bean.Archive;
 
 public class ArchiveBuilderImpl implements ArchiveBuilder {
 

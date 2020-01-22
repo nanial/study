@@ -1,6 +1,10 @@
-package com.task.sixth.archive.domain;
+package com.task.sixth.archive.view;
 
 import com.task.sixth.archive.apiBusiness.ArchiveManager;
+import com.task.sixth.archive.bean.Customer;
+import com.task.sixth.archive.bean.Customers;
+import com.task.sixth.archive.bean.Portfolio;
+import com.task.sixth.archive.bean.Role;
 import com.task.sixth.archive.business.ArchiveManagerImpl;
 import com.task.sixth.archive.dao.ArchiveDaoImpl;
 import com.task.sixth.archive.filter.Filter;
@@ -13,7 +17,7 @@ public class Menu {
     ArchiveManager am = new ArchiveManagerImpl(new ArchiveDaoImpl());
 
     ArrayList<Customer> customers = new Customers().fillListOfCustomer();
-    ArrayList<Portfolio> returnPortfolios = new ArrayList<>();
+    public ArrayList<Portfolio> returnPortfolios = new ArrayList<>();
 
 
     public void login(ArrayList<Portfolio> portfolios) {
@@ -31,7 +35,7 @@ public class Menu {
 
             for (Customer c : customers) {
 
-                if (c.getPosition().equals(position)){
+                 if (c.getPosition().equals(position)){
 
                     if (c.getRole() == Role.USER){
 

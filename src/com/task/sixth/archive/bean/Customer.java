@@ -1,9 +1,14 @@
-package com.task.sixth.archive.domain;
+package com.task.sixth.archive.bean;
 
-public class Customer {
+import java.io.Serializable;
+
+public class Customer implements Serializable {
 
     private String position;
     private Role role;
+
+    public Customer() {
+    }
 
     public Customer(String position, Role role) {
         this.position = position;

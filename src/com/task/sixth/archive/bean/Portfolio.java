@@ -1,4 +1,4 @@
-package com.task.sixth.archive.domain;
+package com.task.sixth.archive.bean;
 
 import java.io.Serializable;
 import java.util.concurrent.atomic.AtomicInteger;

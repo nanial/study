@@ -1,6 +1,6 @@
 package com.task.sixth.archive.apiBusiness;
 
-import com.task.sixth.archive.domain.Portfolio;
+import com.task.sixth.archive.bean.Portfolio;
 import com.task.sixth.archive.filter.Filter;
 import java.util.ArrayList;
 
