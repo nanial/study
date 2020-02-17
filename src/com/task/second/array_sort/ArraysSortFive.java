@@ -14,7 +14,8 @@ public class ArraysSortFive {
     public static void main(String[] args) {
 
         System.out.println(Arrays.toString
-                (insertsSort(new int[]{-220,-115, -115, -99, -15, 166, 174, 182, 232, 820}, -5)));
+                (insertsSort(new int[]
+                        {-220,-115, -115, -99, -15, 166, 174, 182, 232, 820}, -5)));
 
     }
 

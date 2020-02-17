@@ -80,7 +80,7 @@ public class ArchiveDaoImpl implements ArchiveDao {
 
                 for (Portfolio p : portfolios) {
 
-                    if (p.getLastName().equals(filter.getLastName())) {
+                    if (p.getLastName().equalsIgnoreCase(filter.getLastName())) {
 
                         System.out.println(p.toString());
                     }
@@ -90,7 +90,7 @@ public class ArchiveDaoImpl implements ArchiveDao {
 
                 for (Portfolio p : portfolios) {
 
-                    if (p.getName().equals(filter.getName())) {
+                    if (p.getName().equalsIgnoreCase(filter.getName())) {
 
                         System.out.println(p.toString());
                     }
@@ -100,7 +100,7 @@ public class ArchiveDaoImpl implements ArchiveDao {
 
                 for (Portfolio p : portfolios) {
 
-                    if (p.getDepartment().equals(filter.getDepartment())) {
+                    if (p.getDepartment().equalsIgnoreCase(filter.getDepartment())) {
 
                         System.out.println(p.toString());
                     }

@@ -141,7 +141,7 @@ public class Menu {
                         System.exit(0);
 
                     default:
-                        System.out.println("You have been incorrect command");
+                        System.out.println("You have been done incorrect command");
                         System.out.println("Choice next operation");
                         choice = scan.nextInt();
                 }
@@ -223,7 +223,7 @@ public class Menu {
                         System.exit(0);
 
                     default:
-                        System.out.println("You have been incorrect command");
+                        System.out.println("You have been done incorrect command");
                         System.out.println("Choice next operation");
                         choice = scan.nextInt();
 

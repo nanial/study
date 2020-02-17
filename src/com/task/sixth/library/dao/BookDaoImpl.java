@@ -12,7 +12,7 @@ import java.util.ArrayList;
 
 public class BookDaoImpl implements BookDao{
 
-    private final int CAPACITY = 4;
+    private final int CAPACITY = 4;// 4 books per page
 
     @Override
     public ArrayList<Book> getBookList(BookFilter filter) {

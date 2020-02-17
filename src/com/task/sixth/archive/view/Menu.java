@@ -35,7 +35,7 @@ public class Menu {
 
             for (Customer c : customers) {
 
-                 if (c.getPosition().equals(position)){
+                 if (c.getPosition().equalsIgnoreCase(position)){
 
                     if (c.getRole() == Role.USER){
 
