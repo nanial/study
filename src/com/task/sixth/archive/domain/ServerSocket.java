@@ -26,7 +26,7 @@ public class  ServerSocket {
 
     public static void main(String[] args) {
 
-        Archive arch = new ArchiveBuilderFactory().getArchiveBuilder().getArchive();
+        Archive arch = ArchiveBuilderFactory.getInstance().getArchiveBuilder().getArchive();
         ArchiveDao archD = new ArchiveDaoImpl();
         ArchiveManager am = new ArchiveManagerImpl(archD);
 
